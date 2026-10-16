@@ -165,13 +165,16 @@ figures/               协议图与人工评分界面截图
 - **判官 API 记录**：判分背后的云端调用不在本仓；它们产出的逐题分数在本仓。
 - **来源许可不允许再分发的引文**：这类题目的逐字来源摘录以固定占位替换，且每题带自己的许可桶位。
   计数见 [`LICENSE-LEDGER.md`](LICENSE-LEDGER.md)。
-- **LoRA 适配器与题池镜像**：尚未发布，见 [`adapters/`](adapters/README.md)。
+- **LoRA 适配器**：训练出的适配器不发布，见 [`adapters/`](adapters/README.md)。
 
 ## 许可
 
 代码 **Apache-2.0**；数据与内容 **CC-BY-4.0**。第三方来源保留其自身条款。
 [`LICENSE.md`](LICENSE.md)、[`LICENSE-LEDGER.md`](LICENSE-LEDGER.md) 与
 [`SOURCES.md`](SOURCES.md) 记录了哪些可再分发、哪些不可、来源怎么登记，并给出权利方的下架路径。
+
+题池另有一份 Hugging Face 镜像，扣下 `restricted` 一档，其余三档照本仓的桶位逐题标注：
+[huggingface.co/datasets/MorningStar0709/sci-align-benchmark](https://huggingface.co/datasets/MorningStar0709/sci-align-benchmark)。
 
 ## 由来
 

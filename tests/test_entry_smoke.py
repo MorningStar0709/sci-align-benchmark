@@ -28,6 +28,7 @@ CHECK_ENTRIES = {
     "collect_model_identities.py",
     "collect_unattended_walltime.py",
     "emit_provenance_index.py",
+    "export_hf_dataset.py",
 }
 
 # 带 --check 但**故意不在套件里跑**的件，理由必须写出来（空理由等于没解释）

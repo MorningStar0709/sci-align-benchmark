@@ -24,3 +24,10 @@ published, but its SHA-256 is recorded under `meta.license_tagging` so this file
   derivatives. Our pool items cite those sources at short length and are labelled as such.
 - If you hold rights to any item's source and want it removed, open an issue naming the item IDs and
   we will remove it (see `LICENSE.md`).
+
+**Hugging Face mirror**
+
+`restricted` is the one bucket held back from the public Hugging Face mirror of this pool
+(<https://huggingface.co/datasets/MorningStar0709/sci-align-benchmark>). The mirror ships the other
+three buckets — 1,738 items — each labelled exactly as it is here;
+the full pool, `restricted` included, stays in this repository.

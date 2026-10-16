@@ -189,7 +189,7 @@ figures/               Protocol figure and the rater-harness screenshot
 - **Long verbatim source excerpts.** The pool's questions and reference answers are ours; where an audit note
   quotes a source, spans of 300 characters or more are replaced by a placeholder, and every item carries its
   licence bucket (see [`LICENSE-LEDGER.md`](LICENSE-LEDGER.md)). Shorter quotations stay, as citations.
-- **LoRA adapters and a dataset mirror.** Not published yet; see [`adapters/`](adapters/README.md).
+- **LoRA adapters.** The trained adapters are not published; see [`adapters/`](adapters/README.md).
 
 ## Licenses
 
@@ -197,6 +197,10 @@ Code is **Apache-2.0**; data and content are **CC-BY-4.0**. Third-party sources 
 terms. [`LICENSE.md`](LICENSE.md), [`LICENSE-LEDGER.md`](LICENSE-LEDGER.md) and
 [`SOURCES.md`](SOURCES.md) record what is redistributable, what is not, and how each source is
 tracked — including a takedown path for rights holders.
+
+The pool is also mirrored on Hugging Face with the `restricted` bucket held back — the other three
+buckets, each labelled as it is here:
+[huggingface.co/datasets/MorningStar0709/sci-align-benchmark](https://huggingface.co/datasets/MorningStar0709/sci-align-benchmark).
 
 ## Lineage
 

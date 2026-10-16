@@ -29,7 +29,7 @@
    "unknown": 21
   },
   "license_tagging": {
-   "generated_at": "2026-10-16T19:45:26",
+   "generated_at": "2026-10-16T20:33:41",
    "source_file_sha256": "a55c71ff7744929a18962878df6853f08a274f0c457ce02accf668d45115cbad",
    "ledger_sha256": "6922f1bd76e44d96b8f2ed4db4fe6b7cdc3e088f6a827ea329904613f5f89c4d",
    "ledger_path": "docs/reports/pool-arxiv-license-ledger.json",
