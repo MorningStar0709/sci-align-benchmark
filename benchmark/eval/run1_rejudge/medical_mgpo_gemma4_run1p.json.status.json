@@ -1,0 +1,17 @@
+{
+  "model": "models/gemma4_medical/mgpo_eg/final",
+  "judge_model": "deepseek-v4-flash",
+  "status": "completed",
+  "completed": 100,
+  "total": 100,
+  "percent": 100.0,
+  "remaining": 0,
+  "session_completed": 100,
+  "elapsed_sec": 72.47,
+  "rate_q_per_min": 82.7969,
+  "eta_min": 0.0,
+  "eta_at": "2026-08-07 19:08:23",
+  "last_id": "CS-MED-00636",
+  "consecutive_failures": 0,
+  "updated_at": "2026-08-07 19:08:23"
+}

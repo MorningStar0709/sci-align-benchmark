@@ -1,0 +1,789 @@
+{
+ "schema": "scimonitor.artifact-index/v1",
+ "generated_at": "2026-10-16 16:59",
+ "generated_by": "scripts/emit_provenance_index.py",
+ "purpose": "主张-证据矩阵的实物依赖清单：指纹级可核验，不含实物本体。public_safe=true 的条目是 KB 级聚合件，可作为 artifact 仓白名单候选；其余为含题级文本的大产物，只登记指纹。",
+ "counts": {
+  "artifacts": 67,
+  "on_disk": 67,
+  "missing": 0,
+  "untracked": 54,
+  "public_safe": 7
+ },
+ "artifacts": [
+  {
+   "path": "benchmark/eval/a800/xcheck_verdict.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1874,
+   "sha256": "35db475bd0ec9470261d14e573a15d2236b3a986845b7d6af9142e4c8a030e1a",
+   "public_safe": true,
+   "required_by": [
+    "(装载件实读)",
+    "xcheck_offset",
+    "xcheck_offset"
+   ]
+  },
+  {
+   "path": "benchmark/eval/arbitration_patch/patch_summary.json",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 1347,
+   "sha256": "ef626816d44ea0325dd8b348b4d7d2aa4d7addd690d4f258b92753c31eb8c35b",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "B1_adjacent_granularity",
+    "arbitration_degradation_114"
+   ]
+  },
+  {
+   "path": "benchmark/eval/counterfactual/analysis.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 85393,
+   "sha256": "4bd4fcecaaf7d6a87f12cfb6e5294e2251b4c850e84224535cd11ea025b78b14",
+   "public_safe": true,
+   "required_by": [
+    "(装载件实读)",
+    "sigma_g_threshold_family"
+   ]
+  },
+  {
+   "path": "benchmark/eval/counterfactual/mgpo_cf_9b_gen1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 954581,
+   "sha256": "99e252ee68ad4700d66b7f861eff991dc556292a211751ef921aae660d646813",
+   "public_safe": false,
+   "required_by": [
+    "cf_two_tiers"
+   ]
+  },
+  {
+   "path": "benchmark/eval/e10_position_bias/mgpo_eg_gen3__swapped.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 367989,
+   "sha256": "32d0a47ac5f1c02ca8f3ae69c046756be11d973ba22f7bd35570134a7501b4f2",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "e10_position_bias"
+   ]
+  },
+  {
+   "path": "benchmark/eval/e11_judge_ppl/e11_judge_ppl_result.json",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 1709,
+   "sha256": "d177cf3b0d1807de99ca650fd8c1edbb3443c376d743c6f0fdeade6d6c0b8dd0",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "ppl_behavior_correlation"
+   ]
+  },
+  {
+   "path": "benchmark/eval/e12_e4_medical/e12_e4_medical_result.json",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 4583,
+   "sha256": "0da41b069c9898c08cd8c9e59654381ffac0e1741a3233df0051141502be6f0e",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "medical_scale_axis"
+   ]
+  },
+  {
+   "path": "benchmark/eval/judge_audit/anchor_report.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 6228,
+   "sha256": "b44232504a98ff3bf5485a6354f9d89f34cda3a21237ba2f782b3702c3a2f3ef",
+   "public_safe": true,
+   "required_by": [
+    "(装载件实读)",
+    "anchor_0_23",
+    "anchor_21_23"
+   ]
+  },
+  {
+   "path": "benchmark/eval/judge_audit/anchor_state.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 5695,
+   "sha256": "016009eb286c0cf03f762de593708deae28d23023387e5cd0a241d1e268456c5",
+   "public_safe": true,
+   "required_by": [
+    "sigma_g_threshold_family"
+   ]
+  },
+  {
+   "path": "benchmark/eval/judge_audit/fidelity_report.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1754,
+   "sha256": "e29694bb7407789867503224b7770dcb95107ac2e4c0e5a12c7cb1d4896acc60",
+   "public_safe": true,
+   "required_by": [
+    "e12_dispute_rate"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_9b_run1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 405654,
+   "sha256": "423809a87dd2372e2fe8b12e7dfb463d81cc2b492c6fde32917f1d29a43efb2d",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "attractor_medical_nine",
+    "medical_scale_axis"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_9b_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 406464,
+   "sha256": "4f42ff4d3d3c779576666c51c1922c676229021345994a230d4d83f6bce3b438",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_9b_run2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 405948,
+   "sha256": "6208f843b7ff0973a0da535fee2446a97a4e7c10feafea3a8924bb60767cee23",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_9b_run3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 405609,
+   "sha256": "8c0868da295aea938711624c0a0fb363c7f3f9af01504d1b4bf9406d0a916c4c",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_eg_run1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 425230,
+   "sha256": "3edd217768cdc1e2c5bd3ff2f3ce90222dd7d6c375843195bd0ce08f6820c5cd",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_eg_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 425537,
+   "sha256": "38ca0f9a1dd73ad34fcfc40abfce1a8dabad5fd42fdac62182de5f929b3f36cd",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_eg_run2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 424548,
+   "sha256": "85a50109c8a4ccf362c6ee579072035ed0418be7992b3e90629fc6f47efabb47",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_eg_run3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 427922,
+   "sha256": "05c999d7d1821c210de9f4b4e2cdc361e8efd2c2ad573c9c8b8e1d77ff26488c",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_gemma4_run1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 430394,
+   "sha256": "0fb45e4812b384e5faec9b2b24eaa9b8872fc6cffb7993d28eb746fcccb7a34d",
+   "public_safe": false,
+   "required_by": [
+    "attractor_gemma_triplet"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_mgpo_gemma4_run2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 431148,
+   "sha256": "36a3729a4eaf8399f35311a223b046c932219339896bde454a1f12bca80f6676",
+   "public_safe": false,
+   "required_by": [
+    "attractor_gemma_triplet"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_sft_run1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 429780,
+   "sha256": "ebed101dc29a9d9a7de65e9771aec364aa40e720cf94cbe4553b81975c9357be",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_sft_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 430637,
+   "sha256": "50a60248ed7b4480a46981ebd3926a037937269b7123e927c9dd209ed7920a7d",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_sft_run2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 429525,
+   "sha256": "f41eda7a172e5ce2ada588f727d748e9999448057e8251d8097e49dee42faf9c",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/medical_sft_run3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 430394,
+   "sha256": "2d82ee7bb854c7e5780afc5762b216dec7999cc7ef798bf357adf5f8537ebad4",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_9b_med_run1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 981100,
+   "sha256": "a9ee97fcc04139fddd50f1fb649d32bc3d10465fea154f43f3f8128c1ded2d26",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_9b_med_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 983806,
+   "sha256": "a8668125a32abffb007a78e955e0b00e284bad6ea19a6af7164beaf2a4861f13",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_9b_med_run2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 983357,
+   "sha256": "78f23d58e31742531a0e5b77c579bcaa4f5d82cc755dffcc906bc3b3b5897a66",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_9b_med_run3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 982027,
+   "sha256": "c3173ae15fe387334d443ea89d646245a66a6d03c01a03829df8217a2a3e8bcd",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_qwen_med_run1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1003543,
+   "sha256": "0394efcb0cbb89e8324cdd032ddab26bf134e20284860151d8a6107819816590",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_qwen_med_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1003508,
+   "sha256": "a5b5ed3382510a3ccd53119e5bb9c624c742e45df7fc9368a563ea989155e326",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_qwen_med_run2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 999678,
+   "sha256": "d4423510d71c097324442963ed85fcae251c4636814efc19a078cf203dee5161",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/medical_dual_rejudge/raw_qwen_med_run3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1003670,
+   "sha256": "bbf7bfbfe1060afceb1c4dd981c126207f457ab7ac823e5f074a5f7e5865478b",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/b1_verdict.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1151,
+   "sha256": "bd77f97e6a6e17c1457d0bee3f51d08820e4bd2f0eef264757349392cf3fa761",
+   "public_safe": true,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/mgpo_eg_9b_gen2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 954333,
+   "sha256": "5b9bb6c9fd195ceda14945a7ec280abaa40e0564aa013278bce391c1aba79902",
+   "public_safe": false,
+   "required_by": [
+    "pivot_9b_00244"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/mgpo_eg_9b_gen3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 964974,
+   "sha256": "9c167ce24ce282443df4c28b985dc7df8b619e61141c9e345e953114cbb718e3",
+   "public_safe": false,
+   "required_by": [
+    "pivot_9b_00244"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/mgpo_eg_9b_gen4.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 963698,
+   "sha256": "1cf4cf285f7e18239ffb0959d84c363bd3492b2ec44293e1e308228aaa1a1b5b",
+   "public_safe": false,
+   "required_by": [
+    "elasticity_reversal_9b",
+    "mgpo_eg_u_shape"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/mgpo_eg_gen4.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 901388,
+   "sha256": "f248e08497cdb4cb8bcbf2c598aa55a97551c336375c88dbe8eda7ce7ad9aa4c",
+   "public_safe": false,
+   "required_by": [
+    "elasticity_reversal_4b",
+    "mgpo_eg_u_shape",
+    "wilcoxon_holm_significance"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/mgpo_fixed_9b_gen2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 937516,
+   "sha256": "87b47548b82f43fce5a3f69ab5e9a69bca8b520babbc8b98e036da5530fd5ead",
+   "public_safe": false,
+   "required_by": [
+    "eg_fixed_three_tiers"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/mgpo_fixed_9b_gen3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 969060,
+   "sha256": "ed12d49df444627ee0c6dccc806c30b59ee5fb3b266e0d835047642296320e1a",
+   "public_safe": false,
+   "required_by": [
+    "eg_fixed_three_tiers"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/n3_aggregation_summary.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 18413,
+   "sha256": "15b4880a6d97e4557927a8ab9de80f65c6f954ffb01fad2fe473ea3b022fc1f7",
+   "public_safe": true,
+   "required_by": [
+    "(装载件实读)",
+    "pivot_9b_00244"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/raw_9b_gen2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 2781727,
+   "sha256": "03dff9ec436db386ff83f3e7cf04e94b83d8b67596708fbdf42d19a6cca5ae21",
+   "public_safe": false,
+   "required_by": [
+    "small_end_raw_denominator"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/rlvr_c_v2_9b_gen2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1051560,
+   "sha256": "7ad227bcf14ad458757734800feac652bb73d6d0473b2135db7d48534ea18f4c",
+   "public_safe": false,
+   "required_by": [
+    "pivot_9b_00244",
+    "rlvr_5pct_band"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/rlvr_c_v2_9b_gen3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1056368,
+   "sha256": "b6c4d82b965cd96c6e40a092b122d077d769a027d0f6c07ebdd2266363623b1b",
+   "public_safe": false,
+   "required_by": [
+    "pivot_9b_00244"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/rlvr_c_v2_gen4.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 958221,
+   "sha256": "265e415e47804340985161ae3abb42304d95e397fb6d0261de457e2061d0be88",
+   "public_safe": false,
+   "required_by": [
+    "rlvr_5pct_band"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/sft_baseline_gen2.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 961748,
+   "sha256": "4501c2f2b917e831f0c86de7d52c7e8ed0ba213d3ed88854733bef381d564fc8",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/sft_baseline_gen3.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 968943,
+   "sha256": "d4d0e8fab69a52fe13035bf46259a1a3b54f0c67ad11581984e6cee07fe49439",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/n3_regen/sft_baseline_gen4.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 993770,
+   "sha256": "c811124df1a94a9b94403bfd878e5f092a17c16d8a643ea1b568fe397813eab8",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "benchmark/eval/openbook_control/student_sft_baseline_openbook.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 157427,
+   "sha256": "924e07e9431c206dd3cb57f8a60c28b97a8f62c2e666ca1a018908f9a098ec41",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "openbook_dimension_a"
+   ]
+  },
+  {
+   "path": "benchmark/eval/probe_medical_rejudge/gemma12b_medical_rejudged.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1047964,
+   "sha256": "fe11e5ea552973d06231e9878308dbd69cd528d7b088ac4b991adb256c47e209",
+   "public_safe": false,
+   "required_by": [
+    "anchor_gemma_12b"
+   ]
+  },
+  {
+   "path": "benchmark/eval/probe_medical_rejudge/qwen27b_medical_rejudged.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 943539,
+   "sha256": "d73d5c52ecab20c1137632d6071ee65d8c161af5d2a87d2dc42fa5efd7a3d23e",
+   "public_safe": false,
+   "required_by": [
+    "medical_scale_axis"
+   ]
+  },
+  {
+   "path": "benchmark/eval/probe_scaling/gemma12b_control_gen1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 2530569,
+   "sha256": "b445f3aa031e4a8f5647a1b7808e266c35f6cc5162a58df253722b48fac2baef",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "anchor_gemma_12b",
+    "anchor_gemma_12b"
+   ]
+  },
+  {
+   "path": "benchmark/eval/probe_scaling/qwen27b_control_gen1.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 2701373,
+   "sha256": "732cc9d61f095ddd565cd4e0a4462b729301a97489bb28bd78dcd9013e9a7000",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "anchor_27b",
+    "anchor_27b"
+   ]
+  },
+  {
+   "path": "benchmark/eval/run1_rejudge/mgpo_eg_9b_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 972339,
+   "sha256": "383de5c9550a7a5c7b191acab1022f27f41bcc0a4b3a95190995d40462461c4b",
+   "public_safe": false,
+   "required_by": [
+    "pivot_9b_00244"
+   ]
+  },
+  {
+   "path": "benchmark/eval/run1_rejudge/raw_9b_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 2814037,
+   "sha256": "d5356b6c2ae1ef1d0e3444f18888dfd0e77dea3cb8d2961731780087eda6e709",
+   "public_safe": false,
+   "required_by": [
+    "drift_00606"
+   ]
+  },
+  {
+   "path": "benchmark/eval/run1_rejudge/rlvr_c_v2_9b_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 1066620,
+   "sha256": "776d5e8f8837024159816209f9f75d384be97285a0f6dc63f0ab0b958f6722e6",
+   "public_safe": false,
+   "required_by": [
+    "pivot_9b_00244"
+   ]
+  },
+  {
+   "path": "benchmark/eval/run1_rejudge/sft_baseline_run1p.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 981212,
+   "sha256": "e17e33dc3e260d74e8e79ead1bdcb289ad601486473c084504f6e28e3151a3e9",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)"
+   ]
+  },
+  {
+   "path": "docs/reports/analysis-judge-drift-run1-rejudge.md",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 12333,
+   "sha256": "e712d8d308915807dbed580f38bda79df4fbf4970c25988263a3d157d81f09f8",
+   "public_safe": false,
+   "required_by": [
+    "drift_00606"
+   ]
+  },
+  {
+   "path": "models/v2_formal_rebuilt/standard_lora_ppl.json",
+   "on_disk": true,
+   "tracked": false,
+   "bytes": 416,
+   "sha256": "2dcfd0c8cd8764b207cc47b8e325aa16251066a780e69ce2ed7d2d6d32b45519",
+   "public_safe": false,
+   "required_by": [
+    "qlora_ppl_down_score_down"
+   ]
+  },
+  {
+   "path": "papers/paper-a/figures/scripts/surface_stats.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 6882,
+   "sha256": "71147ac5d502bee03ed4fe47cb51342fe6e191dd0f25488ad22969478229cea7",
+   "public_safe": false,
+   "required_by": [
+    "elasticity_reversal_4b",
+    "elasticity_reversal_9b",
+    "mgpo_eg_u_shape",
+    "rlvr_5pct_band",
+    "wilcoxon_holm_significance"
+   ]
+  },
+  {
+   "path": "release/adapter_manifest.json",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 30277,
+   "sha256": "6103f8f77ddf97af8a70e7a029c591fcd003737e93d1aead1cb683be1b073be7",
+   "public_safe": false,
+   "required_by": [
+    "(装载件实读)",
+    "openbook_dimension_a"
+   ]
+  },
+  {
+   "path": "scripts/check_figure_ledger.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 19095,
+   "sha256": "a8c289bdc80c6ea44b689d142f8c45988ffc745c10218f995cf4cf2a4881bd3a",
+   "public_safe": false,
+   "required_by": [
+    "anchor_0_23",
+    "anchor_21_23",
+    "cf_two_tiers",
+    "drift_00606",
+    "eg_fixed_three_tiers"
+   ]
+  },
+  {
+   "path": "scripts/check_product_self_consistency.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 14882,
+   "sha256": "cce574a0acee5ad8f2b1f5d7fff5598a21d80c3009fa0a2576e892694f57269c",
+   "public_safe": false,
+   "required_by": [
+    "e12_dispute_rate",
+    "small_end_raw_denominator"
+   ]
+  },
+  {
+   "path": "scripts/claim_evidence.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 41476,
+   "sha256": "3965678aa057ffd0137eb8e5616b8fd2e0bd043b1ebe6119a132b1898b5ba7d1",
+   "public_safe": false,
+   "required_by": [
+    "attractor_gemma_triplet",
+    "attractor_medical_nine"
+   ]
+  },
+  {
+   "path": "scripts/inventory_experiment_assets.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 12937,
+   "sha256": "f0563b1a8ffc2f11ed163ea239942989f13f552e935d565c0df0933211dd2147",
+   "public_safe": false,
+   "required_by": [
+    "qlora_ppl_down_score_down"
+   ]
+  },
+  {
+   "path": "scripts/probe_readers.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 10296,
+   "sha256": "9e944b7d01ccaef38fda08939abca3cc19d6822f8f789ef4cd23fd40b96ead90",
+   "public_safe": false,
+   "required_by": [
+    "e10_position_bias",
+    "medical_scale_axis",
+    "openbook_dimension_a",
+    "ppl_behavior_correlation"
+   ]
+  },
+  {
+   "path": "scripts/run_arbitration_patch.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 23528,
+   "sha256": "4b2471206f2a2af5bf0819dc8bb21eee324d99ee7123d827682179a30d52b59e",
+   "public_safe": false,
+   "required_by": [
+    "B1_adjacent_granularity",
+    "arbitration_degradation_114"
+   ]
+  },
+  {
+   "path": "scripts/verify_judge_drift_aggregate.py",
+   "on_disk": true,
+   "tracked": true,
+   "bytes": 12091,
+   "sha256": "e4e5f92b129dea96c54400b148cad2fe423fb09ad7d480ef63ae5475b5c65ccb",
+   "public_safe": false,
+   "required_by": [
+    "drift_00606"
+   ]
+  }
+ ]
+}

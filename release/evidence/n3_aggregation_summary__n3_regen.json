@@ -1,0 +1,816 @@
+{
+ "source": "benchmark/eval/n3_regen/n3_aggregation_summary.json",
+ "source_sha256": "15b4880a6d97e4557927a8ab9de80f65c6f954ffb01fad2fe473ea3b022fc1f7",
+ "source_bytes": 18413,
+ "mode": "structure",
+ "dropped_fields": {},
+ "required_by": [
+  "(装载件实读)",
+  "pivot_9b_00244"
+ ],
+ "data": {
+  "generated_at": "2026-09-29T15:09:37",
+  "agg_gens": [
+   2,
+   3
+  ],
+  "dispute_threshold": 0.25,
+  "rows": [
+   {
+    "key": "raw_qwen",
+    "label": "Raw Qwen3.5-4B",
+    "domain": "control",
+    "batch": "4b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.162,
+     "dispute_rate": 0.17
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.3458,
+     "gen2": 0.3508,
+     "gen3": 0.3642
+    },
+    "column": "4B",
+    "arm": "raw",
+    "n_gens": 3,
+    "mean": 0.3536,
+    "std": 0.0095,
+    "gen_variance": 9.1e-05
+   },
+   {
+    "key": "sft_baseline",
+    "label": "SFT Baseline 4B",
+    "domain": "control",
+    "batch": "4b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0894,
+     "dispute_rate": 0.0467
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.4125,
+     "gen2": 0.4008,
+     "gen3": 0.4058
+    },
+    "column": "4B",
+    "arm": "sft",
+    "n_gens": 3,
+    "mean": 0.4064,
+    "std": 0.0059,
+    "gen_variance": 3.4e-05
+   },
+   {
+    "key": "mgpo_eg",
+    "label": "MGPO-EG 4B",
+    "domain": "control",
+    "batch": "4b",
+    "judge_stats": {
+     "n_dual_records": 294,
+     "mean_abs_judge_diff": 0.0803,
+     "dispute_rate": 0.0272
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.3807,
+     "gen2": 0.3817,
+     "gen3": 0.395
+    },
+    "column": "4B",
+    "arm": "mgpo_eg",
+    "n_gens": 3,
+    "mean": 0.3858,
+    "std": 0.008,
+    "gen_variance": 6.4e-05
+   },
+   {
+    "key": "rlvr_c_v2",
+    "label": "RLVR-C v2 4B",
+    "domain": "control",
+    "batch": "4b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0886,
+     "dispute_rate": 0.03
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.4058,
+     "gen2": 0.4092,
+     "gen3": 0.3933
+    },
+    "column": "4B",
+    "arm": "rlvr",
+    "n_gens": 3,
+    "mean": 0.4028,
+    "std": 0.0084,
+    "gen_variance": 7e-05
+   },
+   {
+    "key": "raw_9b",
+    "label": "Raw Qwen3.5-9B",
+    "domain": "control",
+    "batch": "9b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.1874,
+     "dispute_rate": 0.2167
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.3817,
+     "gen2": 0.3925,
+     "gen3": 0.3908
+    },
+    "column": "9B",
+    "arm": "raw",
+    "n_gens": 3,
+    "mean": 0.3883,
+    "std": 0.0058,
+    "gen_variance": 3.4e-05
+   },
+   {
+    "key": "sft_9b",
+    "label": "SFT Baseline 9B",
+    "domain": "control",
+    "batch": "9b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0905,
+     "dispute_rate": 0.04
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.45,
+     "gen2": 0.4275,
+     "gen3": 0.4392
+    },
+    "column": "9B",
+    "arm": "sft",
+    "n_gens": 3,
+    "mean": 0.4389,
+    "std": 0.0113,
+    "gen_variance": 0.000127
+   },
+   {
+    "key": "mgpo_eg_9b",
+    "label": "MGPO-EG 9B",
+    "domain": "control",
+    "batch": "9b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0999,
+     "dispute_rate": 0.0467
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.4658,
+     "gen2": 0.4758,
+     "gen3": 0.475
+    },
+    "column": "9B",
+    "arm": "mgpo_eg",
+    "n_gens": 3,
+    "mean": 0.4722,
+    "std": 0.0056,
+    "gen_variance": 3.1e-05
+   },
+   {
+    "key": "mgpo_fixed_9b",
+    "label": "MGPO-fixed 9B",
+    "domain": "control",
+    "batch": "9b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.105,
+     "dispute_rate": 0.05
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.455,
+     "gen2": 0.4592,
+     "gen3": 0.465
+    },
+    "column": "9B",
+    "arm": "mgpo_fixed",
+    "n_gens": 3,
+    "mean": 0.4597,
+    "std": 0.005,
+    "gen_variance": 2.5e-05
+   },
+   {
+    "key": "rlvr_c_v2_9b",
+    "label": "RLVR-C v2 9B",
+    "domain": "control",
+    "batch": "9b",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0981,
+     "dispute_rate": 0.05
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.455,
+     "gen2": 0.4367,
+     "gen3": 0.4517
+    },
+    "column": "9B",
+    "arm": "rlvr",
+    "n_gens": 3,
+    "mean": 0.4478,
+    "std": 0.0098,
+    "gen_variance": 9.5e-05
+   },
+   {
+    "key": "raw_gemma4",
+    "label": "Raw Gemma-4-E4B",
+    "domain": "control",
+    "batch": "gemma",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0988,
+     "dispute_rate": 0.0267
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.4783,
+     "gen2": 0.4717,
+     "gen3": 0.48
+    },
+    "column": "E4B-it",
+    "arm": "raw",
+    "n_gens": 3,
+    "mean": 0.4767,
+    "std": 0.0044,
+    "gen_variance": 1.9e-05
+   },
+   {
+    "key": "sft_gemma4",
+    "label": "SFT Gemma-4-E4B",
+    "domain": "control",
+    "batch": "gemma",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0818,
+     "dispute_rate": 0.05
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.401,
+     "gen2": 0.4383,
+     "gen3": 0.4133
+    },
+    "column": "E4B-it",
+    "arm": "sft",
+    "n_gens": 3,
+    "mean": 0.4175,
+    "std": 0.019,
+    "gen_variance": 0.000361
+   },
+   {
+    "key": "mgpo_eg_gemma4",
+    "label": "MGPO-EG Gemma-4-E4B",
+    "domain": "control",
+    "batch": "gemma",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0831,
+     "dispute_rate": 0.02
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.3742,
+     "gen2": 0.3842,
+     "gen3": 0.3708
+    },
+    "column": "E4B-it",
+    "arm": "mgpo_eg",
+    "n_gens": 3,
+    "mean": 0.3764,
+    "std": 0.007,
+    "gen_variance": 4.9e-05
+   },
+   {
+    "key": "rlvr_c_v2_gemma4",
+    "label": "RLVR-C v2 Gemma-4-E4B",
+    "domain": "control",
+    "batch": "gemma",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0869,
+     "dispute_rate": 0.0467
+    },
+    "gen_scores": {
+     "gen1(run1p)": 0.415,
+     "gen2": 0.4047,
+     "gen3": 0.4267
+    },
+    "column": "E4B-it",
+    "arm": "rlvr",
+    "n_gens": 3,
+    "mean": 0.4155,
+    "std": 0.011,
+    "gen_variance": 0.000121
+   },
+   {
+    "key": "raw_qwen_med",
+    "label": "Raw Qwen3.5-4B Med",
+    "domain": "medical",
+    "batch": "4b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.485,
+     "gen2": 0.455,
+     "gen3": 0.445
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.4617,
+    "std": 0.0208,
+    "gen_variance": 0.000433
+   },
+   {
+    "key": "medical_sft",
+    "label": "Medical SFT 4B",
+    "domain": "medical",
+    "batch": "4b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.595,
+     "gen2": 0.5825,
+     "gen3": 0.575
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.5842,
+    "std": 0.0101,
+    "gen_variance": 0.000102
+   },
+   {
+    "key": "medical_mgpo_eg",
+    "label": "Medical MGPO-EG 4B",
+    "domain": "medical",
+    "batch": "4b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.6,
+     "gen2": 0.615,
+     "gen3": 0.5725
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.5958,
+    "std": 0.0216,
+    "gen_variance": 0.000465
+   },
+   {
+    "key": "medical_rlvr_c_v2",
+    "label": "Medical RLVR-C v2 4B",
+    "domain": "medical",
+    "batch": "4b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.5525,
+     "gen2": 0.5775,
+     "gen3": 0.575
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.5683,
+    "std": 0.0138,
+    "gen_variance": 0.00019
+   },
+   {
+    "key": "raw_9b_med",
+    "label": "Raw Qwen3.5-9B Med",
+    "domain": "medical",
+    "batch": "9b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.5125,
+     "gen2": 0.4775,
+     "gen3": 0.4875
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.4925,
+    "std": 0.018,
+    "gen_variance": 0.000325
+   },
+   {
+    "key": "medical_sft_9b",
+    "label": "Medical SFT 9B",
+    "domain": "medical",
+    "batch": "9b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.4825,
+     "gen2": 0.4875,
+     "gen3": 0.48
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.4833,
+    "std": 0.0038,
+    "gen_variance": 1.5e-05
+   },
+   {
+    "key": "medical_mgpo_9b",
+    "label": "Medical MGPO-EG 9B",
+    "domain": "medical",
+    "batch": "9b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.615,
+     "gen2": 0.6225,
+     "gen3": 0.6475
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.6283,
+    "std": 0.017,
+    "gen_variance": 0.00029
+   },
+   {
+    "key": "medical_rl_9b",
+    "label": "Medical RLVR-C 9B",
+    "domain": "medical",
+    "batch": "9b",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.5125,
+     "gen2": 0.4775,
+     "gen3": 0.48
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.49,
+    "std": 0.0195,
+    "gen_variance": 0.000381
+   },
+   {
+    "key": "raw_gemma4_med",
+    "label": "Raw Gemma-4-E4B Med",
+    "domain": "medical",
+    "batch": "gemma",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.5425,
+     "gen2": 0.5325,
+     "gen3": 0.5375
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.5375,
+    "std": 0.005,
+    "gen_variance": 2.5e-05
+   },
+   {
+    "key": "medical_sft_gemma4",
+    "label": "Medical SFT Gemma-4-E4B",
+    "domain": "medical",
+    "batch": "gemma",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.475,
+     "gen2": 0.4975,
+     "gen3": 0.47
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.4808,
+    "std": 0.0146,
+    "gen_variance": 0.000215
+   },
+   {
+    "key": "medical_mgpo_gemma4",
+    "label": "Medical MGPO-EG Gemma-4-E4B",
+    "domain": "medical",
+    "batch": "gemma",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.59,
+     "gen2": 0.605,
+     "gen3": 0.58
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.5917,
+    "std": 0.0126,
+    "gen_variance": 0.000158
+   },
+   {
+    "key": "medical_rl_gemma4",
+    "label": "Medical RLVR-C Gemma-4-E4B",
+    "domain": "medical",
+    "batch": "gemma",
+    "judge_stats": null,
+    "gen_scores": {
+     "gen1(run1p)": 0.49,
+     "gen2": 0.45,
+     "gen3": 0.4725
+    },
+    "column": null,
+    "arm": null,
+    "n_gens": 3,
+    "mean": 0.4708,
+    "std": 0.0201,
+    "gen_variance": 0.000402
+   },
+   {
+    "key": "raw_08b",
+    "label": "Raw Qwen3.5-0.8B",
+    "domain": "control",
+    "batch": "0.8b",
+    "column": "0.8B",
+    "arm": "raw",
+    "adapter": null,
+    "base_model_id": "principled-intelligence/Qwen3.5-0.8B-text-only",
+    "judge_stats": {
+     "n_dual_records": 299,
+     "mean_abs_judge_diff": 0.0527,
+     "dispute_rate": 0.0033
+    },
+    "gen_scores": {
+     "single": 0.2127
+    },
+    "n_gens": 1,
+    "mean": 0.2127,
+    "std": null,
+    "gen_variance": null
+   },
+   {
+    "key": "sft_08b",
+    "label": "SFT Baseline 0.8B",
+    "domain": "control",
+    "batch": "0.8b",
+    "column": "0.8B",
+    "arm": "sft",
+    "adapter": "models/v3_08b_sft/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 299,
+     "mean_abs_judge_diff": 0.058,
+     "dispute_rate": 0.0134
+    },
+    "gen_scores": {
+     "gen1": 0.2367,
+     "gen2": 0.2126,
+     "gen3": 0.2258
+    },
+    "n_gens": 3,
+    "mean": 0.225,
+    "std": 0.0121,
+    "gen_variance": 0.000146
+   },
+   {
+    "key": "rlvr_08b",
+    "label": "RLVR-C v2 0.8B",
+    "domain": "control",
+    "batch": "0.8b",
+    "column": "0.8B",
+    "arm": "rlvr",
+    "adapter": "models/v3_08b_rlvr_c_v2/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0541,
+     "dispute_rate": 0.0067
+    },
+    "gen_scores": {
+     "gen1": 0.2175,
+     "gen2": 0.2233,
+     "gen3": 0.2183
+    },
+    "n_gens": 3,
+    "mean": 0.2197,
+    "std": 0.0031,
+    "gen_variance": 1e-05
+   },
+   {
+    "key": "mgpo_eg_08b",
+    "label": "MGPO-EG 0.8B",
+    "domain": "control",
+    "batch": "0.8b",
+    "column": "0.8B",
+    "arm": "mgpo_eg",
+    "adapter": "models/v3_08b_mgpo_eg/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 299,
+     "mean_abs_judge_diff": 0.065,
+     "dispute_rate": 0.0067
+    },
+    "gen_scores": {
+     "gen1": 0.2392,
+     "gen2": 0.235,
+     "gen3": 0.2229
+    },
+    "n_gens": 3,
+    "mean": 0.2324,
+    "std": 0.0085,
+    "gen_variance": 7.2e-05
+   },
+   {
+    "key": "raw_2b",
+    "label": "Raw Qwen3.5-2B",
+    "domain": "control",
+    "batch": "2b",
+    "column": "2B",
+    "arm": "raw",
+    "adapter": null,
+    "base_model_id": "principled-intelligence/Qwen3.5-2B-text-only",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0967,
+     "dispute_rate": 0.0333
+    },
+    "gen_scores": {
+     "single": 0.3308
+    },
+    "n_gens": 1,
+    "mean": 0.3308,
+    "std": null,
+    "gen_variance": null
+   },
+   {
+    "key": "sft_2b",
+    "label": "SFT Baseline 2B",
+    "domain": "control",
+    "batch": "2b",
+    "column": "2B",
+    "arm": "sft",
+    "adapter": "models/v3_2b_sft/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0836,
+     "dispute_rate": 0.0233
+    },
+    "gen_scores": {
+     "gen1": 0.3258,
+     "gen2": 0.3235,
+     "gen3": 0.32
+    },
+    "n_gens": 3,
+    "mean": 0.3231,
+    "std": 0.0029,
+    "gen_variance": 9e-06
+   },
+   {
+    "key": "rlvr_2b",
+    "label": "RLVR-C v2 2B",
+    "domain": "control",
+    "batch": "2b",
+    "column": "2B",
+    "arm": "rlvr",
+    "adapter": "models/v3_2b_rlvr_c_v2/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.087,
+     "dispute_rate": 0.0167
+    },
+    "gen_scores": {
+     "gen1": 0.3358,
+     "gen2": 0.335,
+     "gen3": 0.3442
+    },
+    "n_gens": 3,
+    "mean": 0.3383,
+    "std": 0.0051,
+    "gen_variance": 2.6e-05
+   },
+   {
+    "key": "mgpo_eg_2b",
+    "label": "MGPO-EG 2B",
+    "domain": "control",
+    "batch": "2b",
+    "column": "2B",
+    "arm": "mgpo_eg",
+    "adapter": "models/v3_2b_mgpo_eg/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0697,
+     "dispute_rate": 0.0033
+    },
+    "gen_scores": {
+     "gen1": 0.3206,
+     "gen2": 0.3375,
+     "gen3": 0.3242
+    },
+    "n_gens": 3,
+    "mean": 0.3274,
+    "std": 0.0089,
+    "gen_variance": 7.9e-05
+   },
+   {
+    "key": "raw_e2b",
+    "label": "Raw Gemma-4-E2B-it",
+    "domain": "control",
+    "batch": "e2b",
+    "column": "E2B",
+    "arm": "raw",
+    "adapter": null,
+    "base_model_id": "google/gemma-4-E2B-it",
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0781,
+     "dispute_rate": 0.04
+    },
+    "gen_scores": {
+     "gen1": 0.4158,
+     "gen2": 0.4158,
+     "gen3": 0.4142
+    },
+    "n_gens": 3,
+    "mean": 0.4153,
+    "std": 0.0009,
+    "gen_variance": 1e-06
+   },
+   {
+    "key": "sft_e2b",
+    "label": "SFT Baseline E2B",
+    "domain": "control",
+    "batch": "e2b",
+    "column": "E2B",
+    "arm": "sft",
+    "adapter": "models/gemma4_e2b_sft/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.086,
+     "dispute_rate": 0.0267
+    },
+    "gen_scores": {
+     "gen1": 0.39,
+     "gen2": 0.395,
+     "gen3": 0.3992
+    },
+    "n_gens": 3,
+    "mean": 0.3947,
+    "std": 0.0046,
+    "gen_variance": 2.1e-05
+   },
+   {
+    "key": "rlvr_e2b",
+    "label": "RLVR-C v2 E2B",
+    "domain": "control",
+    "batch": "e2b",
+    "column": "E2B",
+    "arm": "rlvr",
+    "adapter": "models/gemma4_e2b_rlvr_c_v2/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.102,
+     "dispute_rate": 0.0533
+    },
+    "gen_scores": {
+     "gen1": 0.4025,
+     "gen2": 0.4054,
+     "gen3": 0.4067
+    },
+    "n_gens": 3,
+    "mean": 0.4049,
+    "std": 0.0022,
+    "gen_variance": 5e-06
+   },
+   {
+    "key": "mgpo_eg_e2b",
+    "label": "MGPO-EG E2B",
+    "domain": "control",
+    "batch": "e2b",
+    "column": "E2B",
+    "arm": "mgpo_eg",
+    "adapter": "models/gemma4_e2b_mgpo_eg/final",
+    "base_model_id": null,
+    "judge_stats": {
+     "n_dual_records": 300,
+     "mean_abs_judge_diff": 0.0879,
+     "dispute_rate": 0.04
+    },
+    "gen_scores": {
+     "gen1": 0.3333,
+     "gen2": 0.3312,
+     "gen3": 0.3342
+    },
+    "n_gens": 3,
+    "mean": 0.3329,
+    "std": 0.0015,
+    "gen_variance": 2e-06
+   }
+  ],
+  "pivot": {
+   "pivot": "mgpo_eg_9b vs rlvr_c_v2_9b",
+   "threshold_2sigma_9b": 0.0332,
+   "mean_a": 0.4722,
+   "mean_b": 0.4478,
+   "margin": 0.0244,
+   "verdict": "elastic_gradient",
+   "claim": "退守'弹性梯度差异'叙事，废掉'完整对调'表述（预注册分流）"
+  }
+ }
+}

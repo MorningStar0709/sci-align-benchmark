@@ -1,0 +1,8 @@
+# 采集服务运行时依赖（进 Docker 镜像的就是这一份）。
+# 分析侧依赖在 requirements-analysis.txt，不要往这里加：镜像越瘦，可被扫到的攻击面越小。
+fastapi==0.136.3
+uvicorn==0.49.0
+jinja2==3.1.6
+python-multipart==0.0.32
+markdown==3.10.3
+pymdown-extensions==11.0.2

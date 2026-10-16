@@ -1,0 +1,18 @@
+{
+  "data/finetune/control_sci/train.jsonl": {
+    "sha256": "09d08c4ee89edbd4d42411a50d15ee9d3b78493a8b6f5c8bfefc526202606f74",
+    "lines": 1408
+  },
+  "data/finetune/control_sci/val.jsonl": {
+    "sha256": "cc4aee05857e205fd03341de1223d18515f68be3a052d7095cd0bd37f0b111c6",
+    "lines": 176
+  },
+  "data/finetune/medical/train.jsonl": {
+    "sha256": "5f9df8a26284d8e63309b14c280f463608e4c18c8605d73ff821fb52a68c3717",
+    "lines": 508
+  },
+  "data/finetune/medical/val.jsonl": {
+    "sha256": "12dcbd6cc242994a8af641000c7dc1e5228786048eecd132008878ea97ce1ec7",
+    "lines": 63
+  }
+}

@@ -1,0 +1,97 @@
+{
+ "source": "benchmark/eval/a800/xcheck_verdict.json",
+ "source_sha256": "35db475bd0ec9470261d14e573a15d2236b3a986845b7d6af9142e4c8a030e1a",
+ "source_bytes": 1874,
+ "mode": "structure",
+ "dropped_fields": {},
+ "required_by": [
+  "(装载件实读)",
+  "xcheck_offset",
+  "xcheck_offset"
+ ],
+ "data": {
+  "phase": "xcheck",
+  "model": "rlvr_c_v2",
+  "gen": 6,
+  "generated_on": "A800-SXM4-80GB (AutoDL)",
+  "judged_on": "A800 本机 judge API",
+  "gen6_mean": 0.3925,
+  "gen6_dimension_means": {
+   "A": 0.2667,
+   "B": 0.3667,
+   "C": 0.4733,
+   "D": 0.4633
+  },
+  "local_band": [
+   0.3933,
+   0.4092
+  ],
+  "sigma_g": 0.0066,
+  "two_sigma_g": 0.0132,
+  "deviation_from_band_edge": -0.0008,
+  "deviation_from_grand_mean": -0.0082,
+  "verdict": "OFFSET",
+  "verdict_semantics": "偏离 < two_sigma_g → 记录环境偏移量，全表照跑，limitations 注明",
+  "dimension_diagnostic": {
+   "A": {
+    "gen2_5": {
+     "2": 0.2733,
+     "3": 0.2967,
+     "4": 0.27,
+     "5": 0.28
+    },
+    "gen6": 0.2667,
+    "local_band": [
+     0.27,
+     0.2967
+    ],
+    "in_band": false
+   },
+   "B": {
+    "gen2_5": {
+     "2": 0.4333,
+     "3": 0.3733,
+     "4": 0.3733,
+     "5": 0.39
+    },
+    "gen6": 0.3667,
+    "local_band": [
+     0.3733,
+     0.4333
+    ],
+    "in_band": false
+   },
+   "C": {
+    "gen2_5": {
+     "2": 0.4667,
+     "3": 0.44,
+     "4": 0.4633,
+     "5": 0.4567
+    },
+    "gen6": 0.4733,
+    "local_band": [
+     0.44,
+     0.4667
+    ],
+    "in_band": false
+   },
+   "D": {
+    "gen2_5": {
+     "2": 0.4633,
+     "3": 0.4633,
+     "4": 0.49,
+     "5": 0.4773
+    },
+    "gen6": 0.4633,
+    "local_band": [
+     0.4633,
+     0.49
+    ],
+    "in_band": true
+   }
+  },
+  "zero_rate_note": "gen6 零分率 18.3%（55/300），本地 gen2-5 范围 15.3%-19.0%，构成一致（内容零分+少量 judge 解析失败），无异常",
+  "ruled_at": "2026-08-08",
+  "ruled_by": "local execution session; pending author sign-off"
+ }
+}

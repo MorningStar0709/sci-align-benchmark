@@ -1,0 +1,907 @@
+{
+  "generated_at": "2026-09-29T18:14:58",
+  "git_head": "3c4e594d49008e600425bcab78243741d4e3726f",
+  "datasets": {
+    "core_v3": {
+      "path": "benchmark/dataset/core_v3.json",
+      "desc": "控制科学主题全量库（1979 题，ABCD 四维；评测冻结子集为 fixed_300 的 300 题）",
+      "exists": true,
+      "sha256": "a55c71ff7744929a18962878df6853f08a274f0c457ce02accf668d45115cbad",
+      "n_questions": 1979
+    },
+    "medical_benchmark": {
+      "path": "benchmark/dataset/medical_benchmark.json",
+      "desc": "医疗域控制理论全量库（759 题；评测冻结子集为 fixed_100_medical 的 100 题）",
+      "exists": true,
+      "sha256": "e053e5dbb3ffa4b4164b5323952c7e7b79024f55613788329620b610f8bd564a",
+      "n_questions": 759
+    },
+    "fixed_300": {
+      "path": "benchmark/eval/rebuilt_quick_judge/fixed_300.json",
+      "desc": "修订定版题集（list 格式，A 维 75 题含 paper_source，开卷对照上下文来源）",
+      "exists": true,
+      "sha256": "649d2cb22c857c8a04788fd92f8170e05b475734c1b12e1a00ec54ca062c1466",
+      "n_questions": 300
+    },
+    "fixed_40": {
+      "path": "benchmark/eval/rebuilt_quick_judge/fixed_40.json",
+      "desc": "fixed_40 历史协议子集（teacher 矩阵评分口径来源）",
+      "exists": true,
+      "sha256": "3a5505f7f72b140d10ff8cbdb3d814d8c45bc4073843ffd50b0f72dd1542ac70",
+      "n_questions": 40
+    }
+  },
+  "judge_prompts": {
+    "control_4d": "packages/mineru-eval/src/mineru_eval/control/prompts.py",
+    "arbitration": "packages/mineru-eval/src/mineru_eval/_shared/scoring_base.py",
+    "medical": "packages/mineru-eval/src/mineru_eval/medical/prompts.py"
+  },
+  "eval_freeze": {
+    "flags": [
+      "--dual-judge",
+      "--all-dimensions-dual",
+      "--parallel",
+      "4",
+      "--retries",
+      "3",
+      "--max-consecutive-failures",
+      "5",
+      "--resume",
+      "--retry-failed"
+    ],
+    "note": "control 域与 scripts/run_n3_regen._build_cmd 逐字一致；medical 域另含 --domain medical（单判口径）；不使用 --answers-cache"
+  },
+  "models": [
+    {
+      "key": "raw_qwen",
+      "label": "Raw Qwen3.5-4B",
+      "domain": "control",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": null,
+      "adapter_exists": true,
+      "adapter_sha256": null
+    },
+    {
+      "key": "sft_baseline",
+      "label": "SFT Baseline 4B",
+      "domain": "control",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": "models/v3_cot_sft/baseline/final",
+      "adapter_exists": true,
+      "adapter_sha256": "a9525d89e000f6976f66d8c39f075ac1077321b6aabc6ec431e355bd6516d2af"
+    },
+    {
+      "key": "mgpo_eg",
+      "label": "MGPO-EG 4B",
+      "domain": "control",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": "models/v3_cot_sft/mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "e00bfd771029b7cd1bbb7f7a3c17c27d96c3638d3a205c35481e86c2858aee35"
+    },
+    {
+      "key": "rlvr_c_v2",
+      "label": "RLVR-C v2 4B",
+      "domain": "control",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": "models/v3_cot_sft/rlvr_c_v2_4b_restored/final",
+      "adapter_exists": true,
+      "adapter_sha256": "33483a4f2c6cf6249c1c6bc6ca45d57e4861dc5d247f8ab05d32ca96aac55ed3"
+    },
+    {
+      "key": "raw_9b",
+      "label": "Raw Qwen3.5-9B",
+      "domain": "control",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": null,
+      "adapter_exists": true,
+      "adapter_sha256": null
+    },
+    {
+      "key": "sft_9b",
+      "label": "SFT Baseline 9B",
+      "domain": "control",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": "models/v3_9b_sft/final",
+      "adapter_exists": true,
+      "adapter_sha256": "b64786a8b6fc226f307dd735a4aa3bec9ca6e794e7e88a8b1e1aea72ae75b303"
+    },
+    {
+      "key": "mgpo_eg_9b",
+      "label": "MGPO-EG 9B",
+      "domain": "control",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": "models/v3_9b_mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "200e10359f3f99e90b34455009a8d4439842d20d2a8cbd7116947e3bc18852fc"
+    },
+    {
+      "key": "mgpo_fixed_9b",
+      "label": "MGPO-fixed 9B",
+      "domain": "control",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": "models/v3_9b_mgpo_fixed/final",
+      "adapter_exists": true,
+      "adapter_sha256": "ef036ea8e1060857973a3a44d02344d610b810f5ab67a6340aee0b24896bf7b7"
+    },
+    {
+      "key": "rlvr_c_v2_9b",
+      "label": "RLVR-C v2 9B",
+      "domain": "control",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": "models/v3_9b_rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "a565d7863fe2b17920b2333782b9a3a989dbb20a89e755d3cd97ac9cd1b9d37d"
+    },
+    {
+      "key": "raw_gemma4",
+      "label": "Raw Gemma-4-E4B",
+      "domain": "control",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": null,
+      "adapter_exists": true,
+      "adapter_sha256": null
+    },
+    {
+      "key": "sft_gemma4",
+      "label": "SFT Gemma-4-E4B",
+      "domain": "control",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": "models/gemma4_sft/final",
+      "adapter_exists": true,
+      "adapter_sha256": "dccb5e53887495858c0825f79d0a5948279bd2e6d778c2f1f8b39930576aad3f"
+    },
+    {
+      "key": "mgpo_eg_gemma4",
+      "label": "MGPO-EG Gemma-4-E4B",
+      "domain": "control",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": "models/gemma4_mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "cc2ba9d8a7483d1388ea0f8bd36fd91c8a258ae5139a3076212ee300643d9fd1"
+    },
+    {
+      "key": "rlvr_c_v2_gemma4",
+      "label": "RLVR-C v2 Gemma-4-E4B",
+      "domain": "control",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": "models/gemma4_rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "341d4dd1b5928c1304b2894d76ded9d0d61082e23abbd7bb1220ec98c6d52ee4"
+    },
+    {
+      "key": "raw_qwen_med",
+      "label": "Raw Qwen3.5-4B Med",
+      "domain": "medical",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": null,
+      "adapter_exists": true,
+      "adapter_sha256": null
+    },
+    {
+      "key": "medical_sft",
+      "label": "Medical SFT 4B",
+      "domain": "medical",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": "models/v3_cot_sft/medical/baseline/final",
+      "adapter_exists": true,
+      "adapter_sha256": "9089f9721d9721f451e7ca4084cca7cc3c34104e133a64884e504c4935d49b7f"
+    },
+    {
+      "key": "medical_mgpo_eg",
+      "label": "Medical MGPO-EG 4B",
+      "domain": "medical",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": "models/v3_cot_sft/medical/mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "0eaf635e286eb47e9ef8c069a018a15eafdf7b22216529a35f3a7a6d1579c6a9"
+    },
+    {
+      "key": "medical_rlvr_c_v2",
+      "label": "Medical RLVR-C v2 4B",
+      "domain": "medical",
+      "batch": "4b",
+      "base_model_id": "principled-intelligence/Qwen3.5-4B-text-only",
+      "adapter": "models/v3_cot_sft/medical/rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "65ed021e26939708e55dbfb10be7694a1030e8095ffa6fb1a967e0c0b0d5b731"
+    },
+    {
+      "key": "raw_9b_med",
+      "label": "Raw Qwen3.5-9B Med",
+      "domain": "medical",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": null,
+      "adapter_exists": true,
+      "adapter_sha256": null
+    },
+    {
+      "key": "medical_sft_9b",
+      "label": "Medical SFT 9B",
+      "domain": "medical",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": "models/v3_9b_sft/medical/baseline/final",
+      "adapter_exists": true,
+      "adapter_sha256": "5b57e207373c2e3021b249ff196cbd18d7d371bf171218796278bdc746d61947"
+    },
+    {
+      "key": "medical_mgpo_9b",
+      "label": "Medical MGPO-EG 9B",
+      "domain": "medical",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": "models/v3_9b_sft/medical/mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "90a8f664be4bb3a1f72b8ebac7b09e92e63e373b62bc16931680ccc31f37afc2"
+    },
+    {
+      "key": "medical_rl_9b",
+      "label": "Medical RLVR-C 9B",
+      "domain": "medical",
+      "batch": "9b",
+      "base_model_id": "Qwen/Qwen3.5-9B",
+      "adapter": "models/v3_9b_sft/medical/rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "7df15302bd832a14102338c7efa13036066cd991828f1831b05a6234975309c8"
+    },
+    {
+      "key": "raw_gemma4_med",
+      "label": "Raw Gemma-4-E4B Med",
+      "domain": "medical",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": null,
+      "adapter_exists": true,
+      "adapter_sha256": null
+    },
+    {
+      "key": "medical_sft_gemma4",
+      "label": "Medical SFT Gemma-4-E4B",
+      "domain": "medical",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": "models/gemma4_medical/sft/final",
+      "adapter_exists": true,
+      "adapter_sha256": "66e194aedd28c13ec0ae87beafa3193930dba24d3c781db1b41222ac554a330d"
+    },
+    {
+      "key": "medical_mgpo_gemma4",
+      "label": "Medical MGPO-EG Gemma-4-E4B",
+      "domain": "medical",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": "models/gemma4_medical/mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "b9def36ad857289bc6238fbcde47dad6e434724ca47f5401b3fa51f9bd643225"
+    },
+    {
+      "key": "medical_rl_gemma4",
+      "label": "Medical RLVR-C Gemma-4-E4B",
+      "domain": "medical",
+      "batch": "gemma",
+      "base_model_id": "google/gemma-4-E4B-it",
+      "adapter": "models/gemma4_medical/rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "8d2c51faca2dfd7a9ca892dc409e00f777dd202ae6a96181b29d800e72713810"
+    }
+  ],
+  "surface_adapters": [
+    {
+      "key": "sft_08b",
+      "label": "SFT Baseline 0.8B",
+      "domain": "control",
+      "batch": "0.8b",
+      "base_model_id": null,
+      "adapter": "models/v3_08b_sft/final",
+      "adapter_exists": true,
+      "adapter_sha256": "4c35a3f0400fcb666d48ea6f1b5f54d0c8efe62acf4f7bf2666be26f6ddc4cc3"
+    },
+    {
+      "key": "rlvr_08b",
+      "label": "RLVR-C v2 0.8B",
+      "domain": "control",
+      "batch": "0.8b",
+      "base_model_id": null,
+      "adapter": "models/v3_08b_rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "0c74318b2f669001fb40f94ece6f530e2d7d309f02c33dc6939e148fc447e19e"
+    },
+    {
+      "key": "mgpo_eg_08b",
+      "label": "MGPO-EG 0.8B",
+      "domain": "control",
+      "batch": "0.8b",
+      "base_model_id": null,
+      "adapter": "models/v3_08b_mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "62ff06eeac0dba351e70f65d7023ed669906c558e07950ab76b2fb13399d910b"
+    },
+    {
+      "key": "sft_2b",
+      "label": "SFT Baseline 2B",
+      "domain": "control",
+      "batch": "2b",
+      "base_model_id": null,
+      "adapter": "models/v3_2b_sft/final",
+      "adapter_exists": true,
+      "adapter_sha256": "7192a1ed7b85ec10f6d9589b23c09d4460707d17f2427db954108b7530ccf153"
+    },
+    {
+      "key": "rlvr_2b",
+      "label": "RLVR-C v2 2B",
+      "domain": "control",
+      "batch": "2b",
+      "base_model_id": null,
+      "adapter": "models/v3_2b_rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "d48fd45321d6a6389bedcf9274161771e6fd12c0e7ab8c583967e3647dea1145"
+    },
+    {
+      "key": "mgpo_eg_2b",
+      "label": "MGPO-EG 2B",
+      "domain": "control",
+      "batch": "2b",
+      "base_model_id": null,
+      "adapter": "models/v3_2b_mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "ff9f070ac10e6e5634d8604e74fdd517581251e82477e11f641625dcc0df75dd"
+    },
+    {
+      "key": "sft_e2b",
+      "label": "SFT Baseline E2B",
+      "domain": "control",
+      "batch": "e2b",
+      "base_model_id": null,
+      "adapter": "models/gemma4_e2b_sft/final",
+      "adapter_exists": true,
+      "adapter_sha256": "45f538ed0c59948d70d1b273eaba4eafcced90937ee7292a194d830fcb86073c"
+    },
+    {
+      "key": "rlvr_e2b",
+      "label": "RLVR-C v2 E2B",
+      "domain": "control",
+      "batch": "e2b",
+      "base_model_id": null,
+      "adapter": "models/gemma4_e2b_rlvr_c_v2/final",
+      "adapter_exists": true,
+      "adapter_sha256": "ae89c4fb37d87b825a4131baa274e492f5ae9fd43bb03126a29dac5955a5bd80"
+    },
+    {
+      "key": "mgpo_eg_e2b",
+      "label": "MGPO-EG E2B",
+      "domain": "control",
+      "batch": "e2b",
+      "base_model_id": null,
+      "adapter": "models/gemma4_e2b_mgpo_eg/final",
+      "adapter_exists": true,
+      "adapter_sha256": "7a05d4ffca9b27ed71f0c1f4e82fe84a80441dbc09a83e8648d7b4f41aeda275"
+    },
+    {
+      "key": "mgpo_fixed_08b",
+      "label": "MGPO-Fixed 0.8B",
+      "domain": "control",
+      "batch": "0.8b",
+      "base_model_id": null,
+      "adapter": "models/v3_08b_mgpo_fixed/final",
+      "adapter_exists": true,
+      "adapter_sha256": "56812ba30db65892cfe9daef12e8b7d2cb31b85668a7ab3722ceebc7b100b5fb"
+    },
+    {
+      "key": "mgpo_fixed_2b",
+      "label": "MGPO-Fixed 2B",
+      "domain": "control",
+      "batch": "2b",
+      "base_model_id": null,
+      "adapter": "models/v3_2b_mgpo_fixed/final",
+      "adapter_exists": true,
+      "adapter_sha256": "8fff52885c5b6513bbe4bc54b51b965e4267377f6c1b7b1dd2820c1c5e56c331"
+    }
+  ],
+  "n3_state": {
+    "rlvr_c_v2": {
+      "run1": {
+        "reused": true,
+        "path": "benchmark/eval/v3_phase4_300/rlvr_c_v2_run1.json",
+        "records": 300
+      },
+      "gen2": {
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_gen2.json",
+        "completed_at": "2026-08-06T06:49:02.529109",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      },
+      "gen3": {
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_gen3.json",
+        "completed_at": "2026-08-06T11:15:10.135628",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      },
+      "gen4": {
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_gen4.json",
+        "completed_at": "2026-08-06T15:54:49.069927",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      },
+      "gen5": {
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_gen5.json",
+        "completed_at": "2026-08-06T20:42:57.464302",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      },
+      "gen6": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_gen6.json",
+        "sha256": "d7de6bd6f6682fbba66636f40021b0fa318ae19a4ee4968ba4fdd9205735ffcf",
+        "completed_at": "2026-08-08T14:16:58",
+        "source": "a800",
+        "kind": "xcheck"
+      }
+    },
+    "mgpo_eg_9b": {
+      "run1": {
+        "reused": true,
+        "path": "benchmark/eval/v3_9b_300q/mgpo_eg_9b_run1.json",
+        "records": 300
+      },
+      "gen2": {
+        "path": "benchmark/eval/n3_regen/mgpo_eg_9b_gen2.json",
+        "completed_at": "2026-08-07T01:23:14.721501",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      },
+      "gen3": {
+        "path": "benchmark/eval/n3_regen/mgpo_eg_9b_gen3.json",
+        "completed_at": "2026-08-07T05:51:31.329021",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      },
+      "gen4": {
+        "path": "benchmark/eval/n3_regen/mgpo_eg_9b_gen4.json",
+        "completed_at": "2026-08-07T10:24:44.604591",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      },
+      "gen5": {
+        "path": "benchmark/eval/n3_regen/mgpo_eg_9b_gen5.json",
+        "completed_at": "2026-08-07T14:57:49.820889",
+        "done": true,
+        "fixed_by": "fix_n3_failed_gens"
+      }
+    },
+    "raw_9b": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/raw_9b_run1p.json",
+        "records": 300
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_9b_gen2.json",
+        "completed_at": "2026-08-09T23:05:01.748058"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_9b_gen3.json",
+        "completed_at": "2026-08-09T17:25:29.212786"
+      },
+      "gen4": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_9b_gen4.json",
+        "completed_at": "2026-08-20T13:57:53.371192",
+        "sha256": "8b50987a1d2c5fb5503345476ed989bf0e447b07dfb381117c428b5844d403ed",
+        "source": "local_supplement"
+      }
+    },
+    "raw_9b_med": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/raw_9b_med_run1p.json",
+        "records": 100
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_9b_med_gen2.json",
+        "completed_at": "2026-08-09T19:53:48.361456"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_9b_med_gen3.json",
+        "completed_at": "2026-08-10T00:23:12.072087"
+      }
+    },
+    "sft_9b": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/sft_9b_run1p.json",
+        "records": 300
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/sft_9b_gen2.json",
+        "completed_at": "2026-08-10T04:39:07.135545"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/sft_9b_gen3.json",
+        "completed_at": "2026-08-10T09:21:46.207394"
+      }
+    },
+    "medical_sft_9b": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/medical_sft_9b_run1p.json",
+        "records": 100
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_sft_9b_gen2.json",
+        "completed_at": "2026-08-10T13:07:55.124873"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_sft_9b_gen3.json",
+        "completed_at": "2026-08-10T17:03:53.352005"
+      }
+    },
+    "rlvr_c_v2_9b": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/rlvr_c_v2_9b_run1p.json",
+        "records": 300
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_9b_gen2.json",
+        "completed_at": "2026-08-10T21:57:01.877122"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_9b_gen3.json",
+        "completed_at": "2026-08-11T02:41:01.446413"
+      }
+    },
+    "medical_rl_9b": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/medical_rl_9b_run1p.json",
+        "records": 100
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_rl_9b_gen2.json",
+        "completed_at": "2026-08-11T06:24:39.474282"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_rl_9b_gen3.json",
+        "completed_at": "2026-08-11T10:09:30.150379"
+      }
+    },
+    "mgpo_fixed_9b": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/mgpo_fixed_9b_run1p.json",
+        "records": 300
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/mgpo_fixed_9b_gen2.json",
+        "completed_at": "2026-08-11T14:36:39.297770"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/mgpo_fixed_9b_gen3.json",
+        "completed_at": "2026-08-11T19:05:48.617265"
+      }
+    },
+    "medical_mgpo_9b": {
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/medical_mgpo_9b_run1p.json",
+        "records": 100
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_mgpo_9b_gen2.json",
+        "completed_at": "2026-08-11T20:05:03.198575"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_mgpo_9b_gen3.json",
+        "completed_at": "2026-08-11T21:07:28.932182"
+      }
+    },
+    "raw_qwen": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_qwen_gen2.json",
+        "sha256": "0512461a9b0d9641086a2350687ea3ba60446ed2fa1e33181d93b6794e6c965e",
+        "completed_at": "2026-08-09T03:30:20",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_qwen_gen3.json",
+        "sha256": "45778a5ad88f0f04635718b920a59e06ef8c327164c6a02f1cd320d8c38eef35",
+        "completed_at": "2026-08-09T03:59:31",
+        "source": "a800"
+      }
+    },
+    "sft_baseline": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/sft_baseline_gen2.json",
+        "sha256": "4501c2f2b917e831f0c86de7d52c7e8ed0ba213d3ed88854733bef381d564fc8",
+        "completed_at": "2026-08-09T20:52:16",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/sft_baseline_gen3.json",
+        "sha256": "d4d0e8fab69a52fe13035bf46259a1a3b54f0c67ad11581984e6cee07fe49439",
+        "completed_at": "2026-08-08T21:46:10",
+        "source": "a800"
+      },
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/sft_baseline_run1p.json",
+        "records": 300
+      },
+      "gen4": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/sft_baseline_gen4.json",
+        "completed_at": "2026-08-20T06:27:34.139337",
+        "sha256": "c811124df1a94a9b94403bfd878e5f092a17c16d8a643ea1b568fe397813eab8",
+        "source": "local_supplement"
+      }
+    },
+    "mgpo_eg": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/mgpo_eg_gen2.json",
+        "sha256": "8330e90ac48c5e583941aec242f282b7b5438e67751905152b8eec11371aaed9",
+        "completed_at": "2026-08-09T03:21:57",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/mgpo_eg_gen3.json",
+        "sha256": "920925c8ce9d725b1d6d3d333d33ac0da7fbba81bf6c18301b256a78ffdde6fe",
+        "completed_at": "2026-08-09T03:25:03",
+        "source": "a800"
+      },
+      "run1": {
+        "reused": true,
+        "source": "run1p",
+        "path": "benchmark/eval/run1_rejudge/mgpo_eg_run1p.json",
+        "records": 300
+      },
+      "gen4": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/mgpo_eg_gen4.json",
+        "completed_at": "2026-08-12T18:00:21.255744",
+        "sha256": "f248e08497cdb4cb8bcbf2c598aa55a97551c336375c88dbe8eda7ce7ad9aa4c",
+        "source": "local_supplement"
+      }
+    },
+    "sft_gemma4": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/sft_gemma4_gen2.json",
+        "sha256": "f66181bcd3360c2b6675252737e0ec8b6154656273329f1b8afc3ea66eaf6ee1",
+        "completed_at": "2026-08-09T21:01:42",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/sft_gemma4_gen3.json",
+        "sha256": "fe15b730a54f00a27eaa0f4297d9eda0915ce8ae5fba6f076797a1c882421da6",
+        "completed_at": "2026-08-10T02:08:41",
+        "source": "a800"
+      }
+    },
+    "raw_gemma4": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_gemma4_gen2.json",
+        "sha256": "6b1c4abb0b25ea85324c8ec316aa8a71c87daff4178021a6d6e2fef7d759a096",
+        "completed_at": "2026-08-10T02:10:07",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_gemma4_gen3.json",
+        "sha256": "6f60871257bbd1b9a7a46c27e75081d670b83368a732bea672d69fb6452f0e83",
+        "completed_at": "2026-08-10T02:04:57",
+        "source": "a800"
+      }
+    },
+    "mgpo_eg_gemma4": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/mgpo_eg_gemma4_gen2.json",
+        "sha256": "b9b38224e89560befd72434906bc1a764284e6a6568ae04115a3e9b10afb38ec",
+        "completed_at": "2026-08-10T02:11:20",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/mgpo_eg_gemma4_gen3.json",
+        "sha256": "3550e17d87bf536c47a3bea5cf917b293afc662abca5313d87a5931d1f3d02d7",
+        "completed_at": "2026-08-10T08:59:57",
+        "source": "a800"
+      }
+    },
+    "raw_qwen_med": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_qwen_med_gen2.json",
+        "sha256": "0716af08f903a28e674b5fe263e7bb62ee1c7762a81979ffb090f1f5798d406c",
+        "completed_at": "2026-08-10T06:43:20",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_qwen_med_gen3.json",
+        "sha256": "651c06d54876e21fbb26e069d59826fb1ac2a848bc1ff1e9aa6f17ca9012112c",
+        "completed_at": "2026-08-10T10:54:33",
+        "source": "a800"
+      }
+    },
+    "medical_sft": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_sft_gen2.json",
+        "sha256": "72cca962d01d825a63f3e34eaeb9cce09b63af89ea217707a9ef87d7c362052d",
+        "completed_at": "2026-08-10T10:52:09",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_sft_gen3.json",
+        "sha256": "b6784b5a0c403964ccf619b08350dc17bf5dc3f7145dad448995bb5c2d5462cf",
+        "completed_at": "2026-08-10T12:56:40",
+        "source": "a800"
+      }
+    },
+    "medical_mgpo_eg": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_mgpo_eg_gen2.json",
+        "sha256": "76122cc35ca57b6f107a68b0bce7fda7a281b210f76543a78acaa82a21c391bd",
+        "completed_at": "2026-08-10T12:40:44",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_mgpo_eg_gen3.json",
+        "sha256": "c3d64f93bbc1dd8fc079c35a91a229674e476e16bd4605f1a9cd2be892d4bb94",
+        "completed_at": "2026-08-10T14:15:40",
+        "source": "a800"
+      }
+    },
+    "rlvr_c_v2_gemma4": {
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_gemma4_gen3.json",
+        "sha256": "0deb6f448534b0eb87408381393cf19699adc957b1c43a3d1fb66f3782f1d00e",
+        "completed_at": "2026-08-10T23:37:50",
+        "source": "a800"
+      },
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/rlvr_c_v2_gemma4_gen2.json",
+        "sha256": "fd553d05333adff40c51c280d6c4559df9740211ee83eece53cfcb9eae9334e5",
+        "completed_at": "2026-08-10T23:40:43",
+        "source": "a800"
+      }
+    },
+    "medical_rlvr_c_v2": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_rlvr_c_v2_gen2.json",
+        "sha256": "a1d2757a0bd4e0ad72bea2b3fef3b65917682db9acf45afa51a8d2026d28e68c",
+        "completed_at": "2026-08-10T14:45:11",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_rlvr_c_v2_gen3.json",
+        "sha256": "c7c3f85c132017ad4c0ba37d9e0ec92d431251c04929ae76d84e68520fc62af7",
+        "completed_at": "2026-08-10T16:10:19",
+        "source": "a800"
+      }
+    },
+    "medical_sft_gemma4": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_sft_gemma4_gen2.json",
+        "sha256": "a3802073e927e3fc9454cbbc434a761216357d00402f1c65df42acf2387e270d",
+        "completed_at": "2026-08-10T17:31:22",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_sft_gemma4_gen3.json",
+        "sha256": "ea8e74d5837784d25b6509b1b5e06a46479e4a87849316ec238d34c0200c2e11",
+        "completed_at": "2026-08-10T18:46:06",
+        "source": "a800"
+      }
+    },
+    "raw_gemma4_med": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_gemma4_med_gen2.json",
+        "sha256": "ba18a5c40471e7bcb16a31def7ff11d6e6a9b7ad22439a0add55a87a432a9bc6",
+        "completed_at": "2026-08-10T19:40:23",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/raw_gemma4_med_gen3.json",
+        "sha256": "7d42a38030fc0e288cc172def26a120576f36c6c93a7e1a159d2ca4a40b76eaf",
+        "completed_at": "2026-08-10T19:53:06",
+        "source": "a800"
+      }
+    },
+    "medical_mgpo_gemma4": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_mgpo_gemma4_gen2.json",
+        "sha256": "be06b1df4b16275e4fa2ce65c06abd73025d1c744516108af8bf858367a65006",
+        "completed_at": "2026-08-10T20:14:13",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_mgpo_gemma4_gen3.json",
+        "sha256": "713b6302401f1ea0e2f77b0f081995e216dc806103f8f3f3155057807ac52e0a",
+        "completed_at": "2026-08-10T21:15:17",
+        "source": "a800"
+      }
+    },
+    "medical_rl_gemma4": {
+      "gen2": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_rl_gemma4_gen2.json",
+        "sha256": "453f7a8d7feb7225fef5ab216e73a1fb6bd3ec9a8244da503df42fd6d775fccd",
+        "completed_at": "2026-08-10T21:41:03",
+        "source": "a800"
+      },
+      "gen3": {
+        "done": true,
+        "path": "benchmark/eval/n3_regen/medical_rl_gemma4_gen3.json",
+        "sha256": "ae9f2e76baf06656e10bef476252bc1246b63886da1f5e2fea9eedde4cf880ee",
+        "completed_at": "2026-08-10T21:49:25",
+        "source": "a800"
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ControlSci Sci-Align Benchmark",
+  "type": "object",
+  "required": ["meta", "questions"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["project", "version", "updated", "total_questions", "dimensions", "source"],
+      "additionalProperties": true,
+      "properties": {
+        "project": {"type": "string", "minLength": 1},
+        "version": {"type": "string", "minLength": 1},
+        "updated": {"type": "string", "minLength": 1},
+        "total_questions": {"type": "integer", "minimum": 0},
+        "dimensions": {
+          "type": "object",
+          "required": ["A", "B", "C", "D"],
+          "additionalProperties": false,
+          "properties": {
+            "A": {"type": "integer", "minimum": 0},
+            "B": {"type": "integer", "minimum": 0},
+            "C": {"type": "integer", "minimum": 0},
+            "D": {"type": "integer", "minimum": 0}
+          }
+        },
+        "source": {"type": "string", "minLength": 1}
+      }
+    },
+    "questions": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/question"}
+    }
+  },
+  "$defs": {
+    "control_category": {
+      "type": "string",
+      "enum": [
+        "classical",
+        "modern",
+        "nonlinear",
+        "robust",
+        "optimal",
+        "adaptive",
+        "digital",
+        "intelligent",
+        "mpc",
+        "multi_agent"
+      ]
+    },
+    "rubric_item": {
+      "type": "object",
+      "required": ["max_score", "weight", "description"],
+      "additionalProperties": false,
+      "properties": {
+        "max_score": {"type": "number", "minimum": 0},
+        "weight": {"type": "number", "minimum": 0, "maximum": 1},
+        "description": {"type": "string", "minLength": 1}
+      }
+    },
+    "rubric": {
+      "type": "object",
+      "required": ["feasibility", "method_choice", "completeness", "innovation", "clarity"],
+      "additionalProperties": false,
+      "properties": {
+        "feasibility": {"$ref": "#/$defs/rubric_item"},
+        "method_choice": {"$ref": "#/$defs/rubric_item"},
+        "completeness": {"$ref": "#/$defs/rubric_item"},
+        "innovation": {"$ref": "#/$defs/rubric_item"},
+        "clarity": {"$ref": "#/$defs/rubric_item"}
+      }
+    },
+    "question": {
+      "type": "object",
+      "required": [
+        "id",
+        "dimension",
+        "difficulty_level",
+        "control_category",
+        "question",
+        "answer",
+        "reasoning_steps",
+        "source_ref",
+        "consistency_status"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "pattern": "^CS-EVO-[0-9]{5}$"},
+        "dimension": {"type": "string", "enum": ["A", "B", "C", "D"]},
+        "difficulty_level": {"type": "string", "enum": ["L1", "L2", "L3", "L4"]},
+        "control_category": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "items": {"$ref": "#/$defs/control_category"},
+          "uniqueItems": true
+        },
+        "question": {"type": "string", "minLength": 1},
+        "answer": {"type": "string", "minLength": 1},
+        "reasoning_steps": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "source_ref": {"type": "string", "minLength": 1},
+        "sensitivity_dimension": {"type": ["string", "null"], "enum": ["parameter", "environment", "constraint", null]},
+        "sibling_id": {"type": ["string", "null"], "pattern": "^CS-EVO-[0-9]{5}$"},
+        "rubric": {"anyOf": [{"$ref": "#/$defs/rubric"}, {"type": "null"}]},
+        "consistency_status": {
+          "type": "string",
+          "enum": ["auto_passed", "needs_review", "reviewed_kept", "reviewed_discarded"]
+        },
+        "scoring_reason": {"type": ["string", "null"]},
+        "scoring_issues": {"type": ["array", "null"], "items": {"type": "string"}}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"dimension": {"const": "C"}}},
+          "then": {"required": ["sensitivity_dimension", "sibling_id"]}
+        },
+        {
+          "if": {"properties": {"dimension": {"const": "D"}}},
+          "then": {"required": ["rubric"]}
+        }
+      ]
+    }
+  }
+}

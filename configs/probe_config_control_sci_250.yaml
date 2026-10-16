@@ -1,0 +1,60 @@
+# LoRA 探针矩阵配置 — control_sci rebuilt 数据（250 步收敛版）
+#
+# Top5 MGPO 组合 250 步收敛验证
+# 基于 30 步筛选结果，仅跑 MGPO 主导的前 5 名
+
+defaults:
+  alpha: 0.0
+  lambda_l2: 0.0
+  max_steps: 250
+  n_train: 1408
+  n_val: 176
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  save_steps: 125
+  base_adapter: models/qlora-qwen4b-cross-final
+  train_data: data/finetune/control_sci/train.jsonl
+  val_data: data/finetune/control_sci/val.jsonl
+  output_root: models/probe_matrix/control_sci_rebuilt_250
+
+runs:
+  # ── Top5 MGPO combos (by 30-step PPL) ──
+  - id: augment_mgpo
+    desc: "Augmentation + MGPO"
+    probes:
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05
+
+  - id: ftd_augment_mgpo
+    desc: "FTD + Augmentation + MGPO"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05
+
+  - id: dora_mgpo
+    desc: "DoRA + MGPO"
+    probes:
+      - type: dora
+      - type: mgpo
+        rho: 0.05
+
+  - id: dora_augment_mgpo
+    desc: "DoRA + Augmentation + MGPO"
+    probes:
+      - type: dora
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05
+
+  - id: mgpo
+    desc: "MGPO only, rho=0.05"
+    probes:
+      - type: mgpo
+        rho: 0.05

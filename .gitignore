@@ -1,0 +1,19 @@
+# Public checkout — ignore only what a local checkout generates.
+# Deliberately NOT the working repository's .gitignore: that one excludes
+# `benchmark/eval/**`, which this artifact *does* ship.
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+.eggs/
+build/
+dist/
+.env
+.env.*
+*.sqlite3
+# `logs/` is rewritten every time the shipped gate runner executes — and the suite runs it,
+# so a checkout dirties itself after `pytest`. Nothing under `logs/` ships.
+/logs/

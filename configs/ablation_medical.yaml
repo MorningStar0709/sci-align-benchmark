@@ -1,0 +1,29 @@
+# Ablation 实验配置 — medical 数据
+experiment: ablation
+description: "v2 PLW 消融实验 (medical 数据)"
+
+data:
+  train: data/finetune/medical/train.jsonl
+  val: data/finetune/medical/val.jsonl
+  n_train: 500
+  n_val: 50
+
+model:
+  base_adapter: models/qlora-qwen4b-cross-final
+
+output:
+  root: models/v2_ablation
+
+training:
+  max_steps: 50
+  save_steps: 25
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  sample_ratio: 1.0
+  use_liger: false
+
+scans:
+  lambda_values: [0.001, 0.003, 0.005]
+  alpha_values: [0.0]
+  alpha_for_lambda_scan: 0.0  # λ扫描时 α 的固定值
+  lambda_for_alpha_sweep: 0.0  # α扫描时 λ 的固定值

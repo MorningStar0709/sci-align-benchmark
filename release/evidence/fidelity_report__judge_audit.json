@@ -1,0 +1,110 @@
+{
+ "source": "benchmark/eval/judge_audit/fidelity_report.json",
+ "source_sha256": "e29694bb7407789867503224b7770dcb95107ac2e4c0e5a12c7cb1d4896acc60",
+ "source_bytes": 1754,
+ "mode": "structure",
+ "dropped_fields": {},
+ "required_by": [
+  "e12_dispute_rate"
+ ],
+ "data": {
+  "meta": {
+   "tool": "scripts/run_judge_audit.py",
+   "generated_at": "2026-08-20T03:17:21",
+   "seed": 20260805
+  },
+  "phase": "fidelity",
+  "stats": {
+   "n": 20,
+   "labels": {
+    "entailment": 1,
+    "neutral": 19
+   },
+   "fidelity_rate": 0.05
+  },
+  "checks": [
+   {
+    "id": "CS-EVO-00670",
+    "label": "entailment"
+   },
+   {
+    "id": "CS-EVO-10083",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10601",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00310",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00329",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10124",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10037",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00743",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10590",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00283",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10363",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00976",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10329",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10056",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00376",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00077",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-01176",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10782",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-10289",
+    "label": "neutral"
+   },
+   {
+    "id": "CS-EVO-00149",
+    "label": "neutral"
+   }
+  ],
+  "errors": 0,
+  "breaker_tripped": false
+ }
+}

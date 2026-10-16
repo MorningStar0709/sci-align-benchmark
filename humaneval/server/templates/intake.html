@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block body %}
+<h1>{{ w.TITLE }}</h1>
+
+<section class="consent">
+  <h2>知情同意</h2>
+  <p>{{ w.CONSENT_LEAD }}</p>
+  <ul>
+    {% for head, body in w.CONSENT_ITEMS %}
+    <li><b>{{ head }}</b>：{{ body.format(n=n_items) }}</li>
+    {% endfor %}
+  </ul>
+</section>
+
+<form method="post" action="/demographics" class="intake">
+  <input type="hidden" name="code" value="{{ code }}">
+
+  <label>{{ w.DEMOGRAPHICS_LABELS[0] }}
+    <select name="degree" required>
+      <option value="" disabled selected hidden>{{ w.DEMOGRAPHICS_PLACEHOLDER }}</option>
+      {% for k, v in degrees.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}
+    </select>
+  </label>
+
+  <label>{{ w.DEMOGRAPHICS_LABELS[1] }}
+    <select name="field" required>
+      <option value="" disabled selected hidden>{{ w.DEMOGRAPHICS_PLACEHOLDER }}</option>
+      {% for k, v in fields.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}
+    </select>
+  </label>
+
+  <label>{{ w.DEMOGRAPHICS_LABELS[2] }}
+    <select name="own_project" required>
+      <option value="" disabled selected hidden>{{ w.DEMOGRAPHICS_PLACEHOLDER }}</option>
+      {% for k, v in projects.items() %}<option value="{{ k }}">{{ v }}</option>{% endfor %}
+    </select>
+  </label>
+
+  <label class="agree">
+    <input type="checkbox" name="consented" value="yes" required>
+    {{ w.CONSENT_CHECK }}
+  </label>
+
+  <button type="submit">{{ w.SUBMIT_LABEL }}</button>
+  {% if already %}<p class="hint">您此前已填写过基本信息，重新提交只会更新这几项，已做的评分不受影响。</p>{% endif %}
+</form>
+{% endblock %}

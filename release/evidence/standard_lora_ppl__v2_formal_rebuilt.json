@@ -1,0 +1,24 @@
+{
+ "source": "models/v2_formal_rebuilt/standard_lora_ppl.json",
+ "source_sha256": "2dcfd0c8cd8764b207cc47b8e325aa16251066a780e69ce2ed7d2d6d32b45519",
+ "source_bytes": 416,
+ "mode": "aggregate",
+ "dropped_fields": {},
+ "required_by": [
+  "qlora_ppl_down_score_down"
+ ],
+ "data": {
+  "adapter": "models/qlora-qwen4b-cross-final",
+  "n_samples": 176,
+  "avg_chatml_ppl": 5.92,
+  "avg_raw_ppl": 6.07,
+  "avg_fbc_delta_pct": -2.24,
+  "median_fbc_delta_pct": -3.54,
+  "positive_fbc_count": 36,
+  "positive_fbc_ratio": 0.2045,
+  "model_load_seconds": 11.6,
+  "ppl_compute_seconds": 113.2,
+  "total_seconds": 124.7,
+  "completed_at": "2026-07-02 19:40:03"
+ }
+}

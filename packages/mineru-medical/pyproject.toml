@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mineru-medical"
+version = "0.1.0"
+description = "MinerU Medical RAG — indexing, retrieval, synthesis."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "mineru-core>=0.1.0",
+  "mineru-eval>=0.1.0",
+  "numpy>=1.24.0",
+  "scikit-learn>=1.3.0",
+]
+
+[project.optional-dependencies]
+full = [
+  "faiss-cpu>=1.8.0",
+  "rank-bm25>=0.2.2",
+  "torch>=2.0.0",
+  "transformers>=4.36.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mineru_medical*"]

@@ -1,0 +1,95 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sci-align-benchmark"
+version = "0.1.0"
+description = "Sci-Align Benchmark — scientific document evaluation and medical RAG toolkit."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "typer>=0.12.0",
+  "rich>=13.0.0",
+  "pydantic>=2.0.0",
+  "httpx>=0.27.0",
+  "fastapi>=0.110.0",
+  "uvicorn>=0.27.0",
+  "numpy>=1.24.0",
+  "pyyaml>=6.0",
+  "psutil>=7.0",
+  # huggingface_hub 归 mineru-benchmark（唯一 import 处）；psutil 留在根，scripts/ 巡检内核与 watchdog 直接用
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.11.0"]
+
+[project.optional-dependencies]
+rag = [
+  "faiss-cpu>=1.8.0",
+  "rank-bm25>=0.2.2",
+  "torch>=2.0.0",
+  "transformers>=4.36.0",
+  "scikit-learn>=1.3.0",
+  "bitsandbytes>=0.45",
+]
+
+[project.scripts]
+sci-align = "mineru_cli.app:main"
+
+[tool.uv]
+workspace = { members = ["packages/*"] }
+
+# 默认索引在仓内钉死：机器级 ~/.config/uv/uv.toml 会把镜像写进 uv.lock 的每条 URL，
+# 导致 clone/CI 的依赖来源随开发机配置漂移（且 --frozen 下无回退）。
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
+
+[tool.uv.sources]
+mineru-core = { workspace = true }
+mineru-api = { workspace = true }
+mineru-cli = { workspace = true }
+mineru-pipeline = { workspace = true }
+mineru-benchmark = { workspace = true }
+mineru-medical = { workspace = true }
+mineru-eval = { workspace = true }
+mineru-agent = { workspace = true }
+mineru-generator = { workspace = true }
+mineru-tools = { workspace = true }
+
+[tool.setuptools.packages.find]
+include = ["mineru_*"]
+
+[tool.pytest.ini_options]
+addopts = "--import-mode=importlib"
+# 仓根进 sys.path：仓内测试用 `from scripts.X import …`，而 `--import-mode=importlib` 不会自己插根目录。
+# 不设它时 `python -m pytest` 能过（`-m` 会把 CWD 放进 sys.path），`pytest` 控制台脚本却报
+# `No module named 'scripts'`——实测：公开仓 CI 首次真执行就死在这一条（本机用 `.venv/bin/pytest`
+# 同样复现）。README 里写的正是 `python -m pytest`，但这不该要求读者记得加 `-m`。
+pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+extend-exclude = ["_archive", "temp", "models", "output"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W"]
+ignore = [
+  "E402",  # module-level import not at top — scripts require env/path setup before imports
+  "E501",  # line too long
+  "E701",  # multiple statements on one line (colon)
+  "E702",  # multiple statements on one line (semicolon)
+  "E731",  # lambda assignment
+  "E741",  # ambiguous variable name — common in ML/math code
+  "F841",  # unused variable — experimental code retains debug assignments
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]  # re-exports
+"packages/mineru-eval/src/mineru_eval/**/core.py" = ["F401"]  # re-export hubs for analysis subpackages
+"packages/mineru-agent/src/mineru_agent/agent_cli.py" = ["F401"]  # backward-compat re-export hub
+"packages/mineru-eval/src/mineru_eval/t2_deep_analysis.py" = ["F401"]  # legacy compat shim
+"packages/mineru-eval/src/mineru_eval/t3_deep_analysis.py" = ["F401"]  # legacy compat shim
+"packages/mineru-eval/src/mineru_eval/chunk_embedding_analysis.py" = ["F401"]  # legacy compat shim

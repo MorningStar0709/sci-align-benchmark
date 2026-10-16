@@ -1,0 +1,89 @@
+{
+ "source_dir": "logs",
+ "scanned_files": 21,
+ "segments": [
+  {
+   "minutes": 2893.5,
+   "logs": [
+    "tier2_eval_A.log",
+    "tier2_eval_control_20260814_014349.log"
+   ]
+  },
+  {
+   "minutes": 2786.2,
+   "logs": [
+    "n3_regen_20260809_224115.log"
+   ]
+  },
+  {
+   "minutes": 2200.8,
+   "logs": [
+    "n3_regen_20260806_021702.log",
+    "n3_sigma_20260806_021701.log"
+   ]
+  },
+  {
+   "minutes": 1439.6,
+   "logs": [
+    "cf_eval_20260808_012221.log",
+    "cf_eval_launch_20260808_012221.log"
+   ]
+  },
+  {
+   "minutes": 963.4,
+   "logs": [
+    "tier2_eval_control_20260816_154122.log",
+    "tier2_eval_mgpo_fixed.log"
+   ]
+  },
+  {
+   "minutes": 465.5,
+   "logs": [
+    "local1b_probe_B2.log",
+    "local1b_probe_raw_2b_20260812_230758.log"
+   ]
+  },
+  {
+   "minutes": 370.7,
+   "logs": [
+    "local1b_probe_A2.log",
+    "local1b_probe_raw_0_8b_20260812_230758.log"
+   ]
+  },
+  {
+   "minutes": 282.4,
+   "logs": [
+    "tier2_eval_B.log",
+    "tier2_eval_medical_20260814_014349.log"
+   ]
+  },
+  {
+   "minutes": 213.8,
+   "logs": [
+    "medical_dual_rejudge_20260822.log"
+   ]
+  },
+  {
+   "minutes": 13.4,
+   "logs": [
+    "probe_medical_rejudge_20260824.log"
+   ]
+  },
+  {
+   "minutes": 6.9,
+   "logs": [
+    "local1b_probe_20260812_201028.log",
+    "local1b_probe_smoke.log"
+   ]
+  },
+  {
+   "minutes": 0.9,
+   "logs": [
+    "local1b_probe_20260812_204932.log",
+    "local1b_probe_smoke5.log"
+   ]
+  }
+ ],
+ "total_minutes": 11637.1,
+ "total_hours": 194.0
+}

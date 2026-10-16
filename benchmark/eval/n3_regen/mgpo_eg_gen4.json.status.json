@@ -1,0 +1,17 @@
+{
+  "model": "models/v3_cot_sft/mgpo_eg/final",
+  "judge_model": "deepseek-v4-flash",
+  "status": "completed",
+  "completed": 300,
+  "total": 300,
+  "percent": 100.0,
+  "remaining": 0,
+  "session_completed": 300,
+  "elapsed_sec": 15580.69,
+  "rate_q_per_min": 1.1553,
+  "eta_min": 0.0,
+  "eta_at": "2026-08-12 18:00:19",
+  "last_id": "CS-EVO-10281",
+  "consecutive_failures": 0,
+  "updated_at": "2026-08-12 18:00:19"
+}

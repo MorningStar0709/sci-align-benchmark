@@ -1,0 +1,213 @@
+{
+ "schema": "scimonitor.claim-anchors.manual/v1",
+ "producer": "人工读句（作者授权的 D7 补全轮，2026-10-01 04:3x）；引文由 claim_anchors 按行号取原文，非手打",
+ "status_values": [
+  "stated",
+  "contradicted",
+  "not-stated"
+ ],
+ "anchors": [
+  {
+   "claim_id": "B1_adjacent_granularity",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "(ii) A preregistered promotion of the adjacent-granularity comparison (a",
+   "line_hint": 128,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "预登记的相邻粒度提升判据句",
+   "note_refresh": "2026-10-05 换句跟登记：引文重取自闭合后现句（10-04 摘要/引言改文轮遗留悬空）"
+  },
+  {
+   "claim_id": "anchor_0_23",
+   "file": "papers/paper-b/draft/main.tex",
+   "quote": "the evasive tier), so its $0/23$ ordering rate reflects the",
+   "line_hint": 349,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "0/23 全序率归因于构造而非判官"
+  },
+  {
+   "claim_id": "anchor_21_23",
+   "file": "papers/paper-b/draft/main.tex",
+   "quote": "so its $0/23$ ordering rate reflects the",
+   "line_hint": 414,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "91% 成对比较塌为平局（图注）"
+  },
+  {
+   "claim_id": "arbitration_degradation_114",
+   "file": "papers/paper-b/draft/main.tex",
+   "quote": "Re-arbitrating all 114 with the same arbiter model and prompt",
+   "line_hint": 482,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "114 题次重仲裁后 verdict 不变、margin 0.0139→0.0261"
+  },
+  {
+   "claim_id": "attractor_gemma_triplet",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "MGPO-EG is the only method above the base while SFT and RLVR-C v2 fall",
+   "line_hint": 571,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "fig3 Gemma-4 医疗吸引子图注"
+  },
+  {
+   "claim_id": "attractor_medical_nine",
+   "file": "papers/paper-b/draft/main.tex",
+   "quote": "trained-versus-base comparisons. All nine show a direction consistent",
+   "line_hint": 651,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "九个 trained-vs-base 比较方向一致"
+  },
+  {
+   "claim_id": "cf_two_tiers",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "the counterfactual variant (4B/9B), stay below the frozen threshold",
+   "line_hint": 389,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "反事实变体（4B/9B）低于冻结阈值，正文仅定性",
+   "note_refresh": "2026-10-05 换句跟登记：引文重取自闭合后现句（10-04 摘要/引言改文轮遗留悬空）"
+  },
+  {
+   "claim_id": "drift_00606",
+   "file": "papers/paper-b/draft/main.tex",
+   "quote": "re-judging shifted scores by $+0.0606 \\pm 0.0058$",
+   "line_hint": 300,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "判官漂移聚合 +0.0606 ± 0.0058、11 模型"
+  },
+  {
+   "claim_id": "e10_position_bias",
+   "file": "papers/paper-b/draft/main.tex",
+   "quote": "items with the two judges swapped leaves 94 of 100 final scores",
+   "line_hint": 275,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "交换两判官后 100 题中 94 题终分不变"
+  },
+  {
+   "claim_id": "e12_dispute_rate",
+   "file": "papers/paper-b/draft/main.tex",
+   "quote": "1.32\\% of control items (174/13{,}198) are disputed, with mean judge",
+   "line_hint": 272,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "控制域争议率 1.32%（174/13198）；医疗侧在 B:637 另一分母"
+  },
+  {
+   "claim_id": "eg_fixed_three_tiers",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "MGPO-Fixed is $+0.0133$, which is below the frozen 9B band",
+   "line_hint": 386,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "9B 档 EG−Fixed = +0.0133 低于冻结带（10-01 M10 把正文措辞由 preregistered 改为 frozen，本引文随正文就地换句）"
+  },
+  {
+   "claim_id": "medical_scale_axis",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "At 9B, MGPO-EG attains $+0.1363$. For the Gemma-4 family, MGPO-EG attains",
+   "line_hint": 471,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "医疗域 4B +0.1306 / 9B +0.1363"
+  },
+  {
+   "claim_id": "mgpo_eg_u_shape",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "The gain of MGPO-EG over SFT is non-monotone across the four scale",
+   "line_hint": 309,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "该句直陈 MGPO-EG 对 SFT 增益沿四尺度点非单调"
+  },
+  {
+   "claim_id": "openbook_dimension_a",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "(open-book). Both checkpoints jump (base $0.187\\!\\to\\!0.623$, SFT",
+   "line_hint": 566,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "开卷下各检查点跳升（A 维对比句）"
+  },
+  {
+   "claim_id": "ppl_behavior_correlation",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "\\citep[Appendix~C]{companion2026}), so we do not treat the quantity a",
+   "line_hint": 81,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "ρ=−0.405 且明写 not significant",
+   "note_refresh": "2026-10-05 换句跟登记：引文重取自闭合后现句（10-04 摘要/引言改文轮遗留悬空）"
+  },
+  {
+   "claim_id": "qlora_ppl_down_score_down",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "4B model sharply lowered its perplexity on the target corpus",
+   "line_hint": 57,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "10-01 已查实并反转：A 篇 A:56 的「behaviour did not move」**有据**——DATA-TRACE §5.1 补上的同模型配对 base 0.4669 → qlora 0.4635，Δ=−0.0034（89 题单判）。原在册陈述「行为分下降」字面真而框架误导，已改成实测句；该行留 S 级只因实物在 _archive 仓外 symlink、进不了调用链，不是没测。",
+   "note_refresh": "2026-10-05 换句跟登记：引文重取自闭合后现句（10-04 摘要/引言改文轮遗留悬空）"
+  },
+  {
+   "claim_id": "rlvr_5pct_band",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "the only method whose gain stays inside a $\\pm 5\\%$ band at all four",
+   "line_hint": 522,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "唯一在四个尺度都落在 ±5% 带内的方法"
+  },
+  {
+   "claim_id": "sigma_g_threshold_family",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "protocol. The between-generation variance defines the noise scale",
+   "line_hint": 190,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "σg 定义句。⚠ 该主张的限定部分「仅 4B/9B 两点已标定、27B 无 σg」在正文里**无单句完整陈述**，散见 A:221(4B 带)／A:294(9B 带)／A:548(27B 仅趋势位)——锚点只能钉定义句"
+  },
+  {
+   "claim_id": "small_end_raw_denominator",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "and 2B raw denominators are single generations, so their SFT-versus-raw",
+   "line_hint": 606,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "0.8B/2B raw 分母为单次生成（该句含 2B；0.8B 同段）"
+  },
+  {
+   "claim_id": "wilcoxon_holm_significance",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "$p_{\\mathrm{holm}} \\leq 4.8\\times10^{-5}$), while no within-method pair",
+   "line_hint": 556,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "题级 Wilcoxon+Holm 通过位与未通过位的分界句"
+  },
+  {
+   "claim_id": "elasticity_reversal_9b",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "MGPO-EG margin ($+0.0333$) clears its band by $1\\times10^{-4}$, at the",
+   "line_hint": 314,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "9B 反转格带缘句（派生面因再现 token 失去唯一性，故登记为人工锚点）"
+  },
+  {
+   "claim_id": "pivot_9b_00244",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "methods: at 9B, MGPO-EG exceeds RLVR-C v2 by $0.0244$ on the dual-judge",
+   "line_hint": 325,
+   "method": "manual-read",
+   "status": "stated",
+   "basis": "9B 支点句（同日同上由派生件转入）"
+  }
+ ]
+}

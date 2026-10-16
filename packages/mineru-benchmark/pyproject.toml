@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mineru-benchmark"
+version = "0.1.0"
+description = "MinerU benchmark — thin compat layer (delegates to mineru-eval, mineru-agent, mineru-generator)."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "huggingface_hub>=0.25",
+  "mineru-core>=0.1.0",
+  "mineru-eval>=0.1.0",
+  "mineru-agent>=0.1.0",
+  "mineru-generator>=0.1.0",
+  "numpy>=1.24.0",
+  "scipy>=1.11.0",
+  "sciverse>=0.14",
+  "pymupdf>=1.24",
+  "pypdf>=4.0",
+  "scikit-learn>=1.3.0",
+  "matplotlib>=3.7.0",
+  "seaborn>=0.13.0",
+  "openai>=1.3.0",
+  "httpx>=0.27.0",
+  "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+rag = [
+  "faiss-cpu>=1.8.0",
+  "rank-bm25>=0.2.2",
+  "torch>=2.0.0",
+  "transformers>=4.36.0",
+]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mineru_benchmark*"]

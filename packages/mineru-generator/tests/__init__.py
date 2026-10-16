@@ -1,0 +1,1 @@
+"""mineru-generator smoke tests."""

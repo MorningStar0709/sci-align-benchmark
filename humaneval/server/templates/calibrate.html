@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}评分说明{% endblock %}
+{% block body %}
+<h1>评分说明</h1>
+<p>{{ w.CALIBRATE_LEAD.format(n=items_total) }}</p>
+<ul class="rules">
+  {% for rule in w.CALIBRATE_RULES %}<li>{{ rule }}</li>{% endfor %}
+</ul>
+<p class="warn">{{ w.CALIBRATE_WARN }}</p>
+
+{% for dim, name in dim_names.items() %}
+<section class="anchor-card">
+  <h2>维度 {{ dim }}：{{ name }}</h2>
+  <table>
+    <thead><tr><th>分值</th><th>含义</th></tr></thead>
+    <tbody>
+      {% for level, label in labels[dim].items() %}
+      <tr><td class="lv">{{ "%g"|format(level) }}</td><td>{{ label }}</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endfor %}
+
+<a class="cta" href="/rate/{{ code }}">{{ w.CTA_START }}</a>
+{% endblock %}

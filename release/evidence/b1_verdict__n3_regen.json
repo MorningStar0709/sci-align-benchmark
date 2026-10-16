@@ -1,0 +1,51 @@
+{
+ "source": "benchmark/eval/n3_regen/b1_verdict.json",
+ "source_sha256": "bd77f97e6a6e17c1457d0bee3f51d08820e4bd2f0eef264757349392cf3fa761",
+ "source_bytes": 1151,
+ "mode": "structure",
+ "dropped_fields": {
+  "reason": 1
+ },
+ "required_by": [
+  "(装载件实读)"
+ ],
+ "data": {
+  "model_a": "sft_baseline",
+  "model_b": "raw_9b",
+  "gens": [
+   2,
+   3,
+   4
+  ],
+  "criteria_source": "strategy-eval-fix-paper-assets.md §3.5（2026-08-05 冻结） + plan Task 3 拍板",
+  "deviation_note": "裁决对象按 plan Task 3 改为 sft_baseline vs raw_9b（§3.5 原候选 RLVR-C v2 4B vs raw_9b）；方向判据用 gen 两两配对 margin（plan Step 2 口径，弱于逐代字面条件）",
+  "n_questions_per_gen": {
+   "sft_baseline_gen2": 300,
+   "sft_baseline_gen3": 300,
+   "sft_baseline_gen4": 300,
+   "raw_9b_gen2": 300,
+   "raw_9b_gen3": 300,
+   "raw_9b_gen4": 300
+  },
+  "missing_products": [],
+  "pair_margins": {
+   "gen2_gen3": 0.0117,
+   "gen2_gen4": 0.0133,
+   "gen3_gen4": 0.0167
+  },
+  "n_valid_pairs": 3,
+  "threshold_2sigma_4b": 0.0132,
+  "threshold_2sigma_9b": 0.0332,
+  "mean_margin": 0.0139,
+  "direction_count": {
+   "4b_ahead": 3,
+   "9b_ahead": 0,
+   "tie": 0
+  },
+  "exceeds_threshold": {
+   "4b_caliber": true,
+   "9b_caliber": false
+  },
+  "verdict": "promoted"
+ }
+}

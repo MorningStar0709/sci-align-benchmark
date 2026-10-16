@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mineru-core"
+version = "0.1.0"
+description = "MinerU core library — zero-dependency shared primitives."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "pydantic>=2.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mineru_core*"]

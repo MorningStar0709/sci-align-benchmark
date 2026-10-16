@@ -1,0 +1,31 @@
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python pin 3.11
+      # 瘦 job：只装第三方依赖。此处跑的闸必须不 import 本仓包。
+      - run: uv sync --all-extras --frozen --no-install-workspace
+      - name: Text-level gates
+        run: |
+          .venv/bin/python scripts/check_lexec_dialect.py
+      - name: Ruff
+        run: uvx ruff check
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python pin 3.11
+      # 装 workspace：这里的闸要 import 全链，套件也要。
+      - run: uv sync --all-packages --all-extras --frozen
+      - name: Package import chain
+        run: |
+          .venv/bin/python scripts/verify_refactoring.py
+      - name: Tests
+        run: uv run pytest tests/ -q --tb=short -rs

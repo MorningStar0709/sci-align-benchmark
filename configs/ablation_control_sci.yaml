@@ -1,0 +1,29 @@
+# Ablation 实验配置 — control_sci rebuilt 数据
+experiment: ablation
+description: "v2 PLW 消融实验 (control_sci rebuilt 数据)"
+
+data:
+  train: data/finetune/control_sci/train.jsonl
+  val: data/finetune/control_sci/val.jsonl
+  n_train: 1408
+  n_val: 176
+
+model:
+  base_adapter: models/qlora-qwen4b-cross-final
+
+output:
+  root: models/v2_ablation/control_sci_rebuilt
+
+training:
+  max_steps: 30
+  save_steps: 15
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  sample_ratio: 1.0
+  use_liger: false
+
+scans:
+  lambda_values: [0.00001, 0.00005, 0.0001]
+  alpha_values: [0.0, 0.1, 0.2, 0.5]
+  alpha_for_lambda_scan: 0.3  # λ扫描时 α 的固定值
+  lambda_for_alpha_sweep: 0.0  # α扫描时 λ 的固定值

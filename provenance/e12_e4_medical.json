@@ -1,0 +1,207 @@
+{
+ "analysis": "E12 cross-domain dispute rate + E4 medical protocolization (frozen criterion)",
+ "e12": {
+  "per_domain": [
+   {
+    "domain": "medical(100q×4runs)",
+    "n_artifacts": 48,
+    "total_dual_questions": 4800,
+    "disputed": 60,
+    "dispute_rate": 0.0125,
+    "arbitrated": 60,
+    "mean_score_diff_range": [
+     0.0475,
+     0.1375
+    ],
+    "mean_score_diff_mean": 0.0935
+   },
+   {
+    "domain": "control_n3(300q)",
+    "n_artifacts": 34,
+    "total_dual_questions": 10200,
+    "disputed": 152,
+    "dispute_rate": 0.0149,
+    "arbitrated": 89,
+    "mean_score_diff_range": [
+     0.0258,
+     0.1768
+    ],
+    "mean_score_diff_mean": 0.0996
+   },
+   {
+    "domain": "control_gemma4(300q)",
+    "n_artifacts": 10,
+    "total_dual_questions": 2998,
+    "disputed": 22,
+    "dispute_rate": 0.0073,
+    "arbitrated": 20,
+    "mean_score_diff_range": [
+     0.0816,
+     0.1033
+    ],
+    "mean_score_diff_mean": 0.0925
+   }
+  ],
+  "control_pooled": {
+   "domain": "control_pooled(300q)",
+   "n_artifacts": 44,
+   "total_dual_questions": 13198,
+   "disputed": 174,
+   "dispute_rate": 0.0132,
+   "arbitrated": 109,
+   "mean_score_diff_range": [
+    0.0258,
+    0.1768
+   ],
+   "mean_score_diff_mean": 0.098
+  }
+ },
+ "e4": {
+  "sigma_g_medical": 0.0023,
+  "threshold_2sigma": 0.0045,
+  "sigma_g_formula": "pooled sample variance across 12 models × 4 same-answer runs (pure judge noise)",
+  "per_model_run_std": {
+   "medical_mgpo_9b": 0.0024,
+   "medical_mgpo_eg": 0.0052,
+   "medical_mgpo_gemma4": 0.0061,
+   "medical_rl_9b": 0.0046,
+   "medical_rl_gemma4": 0.002,
+   "medical_rlvr_c_v2": 0.0014,
+   "medical_sft": 0.0014,
+   "medical_sft_9b": 0.0025,
+   "medical_sft_gemma4": 0.002,
+   "raw_9b_med": 0.0063,
+   "raw_gemma4_med": 0.0014,
+   "raw_qwen_med": 0.0059
+  },
+  "verdicts": [
+   {
+    "family": "qwen4b",
+    "pair": "medical_sft vs raw_qwen_med",
+    "run_margins": [
+     0.145,
+     0.135,
+     0.1375,
+     0.135
+    ],
+    "mean_margin": 0.1381,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "qwen4b",
+    "pair": "medical_mgpo_eg vs raw_qwen_med",
+    "run_margins": [
+     0.14,
+     0.125,
+     0.1375,
+     0.12
+    ],
+    "mean_margin": 0.1306,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "qwen4b",
+    "pair": "medical_rlvr_c_v2 vs raw_qwen_med",
+    "run_margins": [
+     0.125,
+     0.11,
+     0.1175,
+     0.11
+    ],
+    "mean_margin": 0.1156,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "qwen9b",
+    "pair": "medical_sft_9b vs raw_9b_med",
+    "run_margins": [
+     -0.0325,
+     -0.035,
+     -0.0425,
+     -0.0325
+    ],
+    "mean_margin": -0.0356,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "qwen9b",
+    "pair": "medical_mgpo_9b vs raw_9b_med",
+    "run_margins": [
+     0.14,
+     0.135,
+     0.125,
+     0.145
+    ],
+    "mean_margin": 0.1363,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "qwen9b",
+    "pair": "medical_rl_9b vs raw_9b_med",
+    "run_margins": [
+     -0.0075,
+     -0.02,
+     -0.02,
+     -0.01
+    ],
+    "mean_margin": -0.0144,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "gemma4",
+    "pair": "medical_sft_gemma4 vs raw_gemma4_med",
+    "run_margins": [
+     -0.09,
+     -0.085,
+     -0.09,
+     -0.09
+    ],
+    "mean_margin": -0.0887,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "gemma4",
+    "pair": "medical_mgpo_gemma4 vs raw_gemma4_med",
+    "run_margins": [
+     0.035,
+     0.0425,
+     0.05,
+     0.0475
+    ],
+    "mean_margin": 0.0437,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   },
+   {
+    "family": "gemma4",
+    "pair": "medical_rl_gemma4 vs raw_gemma4_med",
+    "run_margins": [
+     -0.1025,
+     -0.095,
+     -0.0975,
+     -0.1
+    ],
+    "mean_margin": -0.0988,
+    "all_runs_same_dir": true,
+    "passes_2sigma": true,
+    "verdict": "promoted"
+   }
+  ],
+  "criterion_source": "2026-08-05 冻结（strategy-eval-fix-paper-assets.md §3.5）：全部两两同向 且 |mean margin| > 2σg"
+ }
+}

@@ -1,0 +1,17 @@
+{
+  "model": "models/v3_9b_sft/medical/mgpo_eg/final",
+  "judge_model": "deepseek-v4-flash",
+  "status": "completed",
+  "completed": 100,
+  "total": 100,
+  "percent": 100.0,
+  "remaining": 0,
+  "session_completed": 100,
+  "elapsed_sec": 69.15,
+  "rate_q_per_min": 86.7741,
+  "eta_min": 0.0,
+  "eta_at": "2026-08-07 19:02:18",
+  "last_id": "CS-MED-00636",
+  "consecutive_failures": 0,
+  "updated_at": "2026-08-07 19:02:18"
+}

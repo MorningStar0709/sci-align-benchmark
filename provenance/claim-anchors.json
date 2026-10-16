@@ -1,0 +1,48 @@
+{
+ "schema": "scimonitor.claim-anchors/v1",
+ "derivation": "unique-token only（不手写引文）",
+ "anchors": [
+  {
+   "claim_id": "anchor_27b",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "\\paragraph{Large-scale raw anchors.} Untuned anchors at 27B ($0.4242$ on",
+   "line_hint": 670,
+   "method": "unique-token"
+  },
+  {
+   "claim_id": "anchor_gemma_12b",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "control, $0.5175$ on medical) and Gemma-12B ($0.56$ on control, $0.6125$",
+   "line_hint": 671,
+   "method": "unique-token"
+  },
+  {
+   "claim_id": "elasticity_reversal_4b",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "read as a direction, while MGPO-EG trails by $-5.1\\%$ ($-0.0206$, outside the",
+   "line_hint": 277,
+   "method": "unique-token"
+  },
+  {
+   "claim_id": "pivot_9b_00244",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "methods: at 9B, MGPO-EG exceeds RLVR-C v2 by $0.0244$ on the dual-judge",
+   "line_hint": 345,
+   "method": "unique-token"
+  },
+  {
+   "claim_id": "sigma_g_threshold_family",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "noise scale at each trained scale ($\\sigma_g = 0.0066$ at 4B,",
+   "line_hint": 888,
+   "method": "unique-token"
+  },
+  {
+   "claim_id": "xcheck_offset",
+   "file": "papers/paper-a/draft/main.tex",
+   "quote": "yields an offset of $-0.0008$, below the $2\\sigma_g = 0.0132$ noise scale,",
+   "line_hint": 652,
+   "method": "unique-token"
+  }
+ ]
+}

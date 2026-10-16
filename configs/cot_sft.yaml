@@ -1,0 +1,23 @@
+# CoT Cold-start SFT 配置
+experiment: cot_sft
+description: "v3 Phase 1: CoT Cold-start SFT"
+
+data:
+  medical: null  # 本阶段不使用 medical 数据，保持与变体一致
+  cot: data/finetune/control_sci/cot_train_final.jsonl  # 2167条精炼CoT
+
+model:
+  adapter: models/v2_ablation/control_sci_rebuilt/lambda_0.0/final
+
+output:
+  root: models/v3_cot_sft
+
+training:
+  max_steps: 125  # 基于 loss 曲线确定的最优步数
+  save_steps: 125
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  max_seq_length: 2048
+  lr: 2.0e-5
+  packing: false
+  use_liger: false

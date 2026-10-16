@@ -1,0 +1,27 @@
+# 正式训练配置 — control_sci rebuilt 数据
+experiment: formal
+description: "v2 正式训练 + 评估 (control_sci rebuilt)"
+
+data:
+  train: data/finetune/control_sci/train.jsonl
+  val: data/finetune/control_sci/val.jsonl
+  n_train: 1408
+  n_val: 176
+  judge_questions: benchmark/results/phase1/phase1_questions.json
+
+model:
+  base_adapter: models/qlora-qwen4b-cross-final
+  v1_adapter: models/fr_lora_probe_output/final
+  v2_old_adapter: models/v2_fr_lora_run1/checkpoint-125
+
+output:
+  root: models/v2_formal_rebuilt
+
+training:
+  lambda_l2: 0.0
+  alpha: 0.0
+  max_steps: 30
+  save_steps: 15
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  use_liger: false

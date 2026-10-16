@@ -1,0 +1,133 @@
+# LoRA 探针矩阵配置 — control_sci rebuilt 数据
+#
+# 15 条 30 步 quick-screen runs on control_sci domain
+# 4 个探针: dora, ftd, augment, mgpo
+# 15 runs = 1 baseline + 4 singles + 6 doubles + 4 triples
+
+defaults:
+  alpha: 0.0
+  lambda_l2: 0.0
+  max_steps: 30
+  n_train: 1408
+  n_val: 176
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  save_steps: 15
+  base_adapter: models/qlora-qwen4b-cross-final
+  train_data: data/finetune/control_sci/train.jsonl
+  val_data: data/finetune/control_sci/val.jsonl
+  output_root: models/probe_matrix/control_sci_rebuilt
+
+runs:
+  # ── Baseline ──
+  - id: baseline
+    desc: "λ=0 α=0 对照（无探针）"
+    probes: []
+
+  # ── Single probes ──
+  - id: dora
+    desc: "DoRA only"
+    probes:
+      - type: dora
+
+  - id: ftd
+    desc: "FTD only, drop_rate=0.3"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+
+  - id: augment
+    desc: "Augmentation only, aug_rate=0.5"
+    probes:
+      - type: augment
+        aug_rate: 0.5
+
+  - id: mgpo
+    desc: "MGPO only, rho=0.05"
+    probes:
+      - type: mgpo
+        rho: 0.05
+
+  # ── Double combos ──
+  - id: dora_ftd
+    desc: "DoRA + FTD"
+    probes:
+      - type: dora
+      - type: ftd
+        drop_rate: 0.3
+
+  - id: dora_augment
+    desc: "DoRA + Augmentation"
+    probes:
+      - type: dora
+      - type: augment
+        aug_rate: 0.5
+
+  - id: dora_mgpo
+    desc: "DoRA + MGPO"
+    probes:
+      - type: dora
+      - type: mgpo
+        rho: 0.05
+
+  - id: ftd_augment
+    desc: "FTD + Augmentation"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+      - type: augment
+        aug_rate: 0.5
+
+  - id: ftd_mgpo
+    desc: "FTD + MGPO"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+      - type: mgpo
+        rho: 0.05
+
+  - id: augment_mgpo
+    desc: "Augmentation + MGPO"
+    probes:
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05
+
+  # ── Triple combos ──
+  - id: dora_ftd_augment
+    desc: "DoRA + FTD + Augmentation"
+    probes:
+      - type: dora
+      - type: ftd
+        drop_rate: 0.3
+      - type: augment
+        aug_rate: 0.5
+
+  - id: dora_ftd_mgpo
+    desc: "DoRA + FTD + MGPO"
+    probes:
+      - type: dora
+      - type: ftd
+        drop_rate: 0.3
+      - type: mgpo
+        rho: 0.05
+
+  - id: dora_augment_mgpo
+    desc: "DoRA + Augmentation + MGPO"
+    probes:
+      - type: dora
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05
+
+  - id: ftd_augment_mgpo
+    desc: "FTD + Augmentation + MGPO"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05

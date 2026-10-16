@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}答案质量评分{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="/static/katex/katex.min.css">
+{% endblock %}
+{% block body %}
+<header class="bar">
+  <div>共 <b>{{ total }}</b> 题</div>
+  <div id="progress" class="pill" aria-live="polite">已保存 0 / {{ total }}</div>
+</header>
+<p class="tip">{{ w.RATE_TIP }}</p>
+
+{% for it in items %}
+<article class="item"
+         data-item="{{ it.item_id }}" data-dim="{{ it.dimension }}" data-code="{{ code }}">
+  <h2>
+    <span class="no">{{ loop.index }}</span>
+    <span class="dim">维度 {{ it.dimension }} · {{ dim_names[it.dimension] }}</span>
+    <span class="save" data-role="save">○</span>
+  </h2>
+
+  <details open>
+    <summary>题目</summary>
+    <div class="md">{{ it.question_html | safe }}</div>
+  </details>
+
+  <details open>
+    <summary>标准答案</summary>
+    <div class="md">{{ it.expected_html | safe }}</div>
+  </details>
+
+  <details open>
+    <summary>待评回答</summary>
+    <div class="md answer">{{ it.answer_html | safe }}</div>
+  </details>
+
+  <fieldset class="no-math">
+    <legend>请评价待评回答在该维度上的质量</legend>
+    {% for level, label in labels[it.dimension].items() %}
+    <label class="opt">
+      {#  name 必须随题目变化：同一文档内同名 radio 是一个互斥组，共用 name 会让答后一题取消前一题。 #}
+      <input type="radio" class="score-opt" name="score-{{ it.item_id }}" value="{{ "%g"|format(level) }}">
+      <span class="lv">{{ "%g"|format(level) }}</span>
+      <span class="lb">{{ label }}</span>
+    </label>
+    {% endfor %}
+  </fieldset>
+</article>
+{% endfor %}
+
+<div class="final">
+  <button id="finish" class="cta" type="button">{{ w.FINISH_LABEL }}</button>
+  <p class="hint">{{ w.FINISH_HINT }}</p>
+</div>
+{% endblock %}
+{% block scripts %}
+<script defer src="/static/katex/katex.min.js"></script>
+<script defer src="/static/katex/contrib/auto-render.min.js"></script>
+<script defer src="/static/rater.js"></script>
+{% endblock %}

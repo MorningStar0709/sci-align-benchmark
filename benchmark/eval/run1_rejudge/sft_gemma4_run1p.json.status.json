@@ -1,0 +1,17 @@
+{
+  "model": "models/gemma4_sft/final",
+  "judge_model": "deepseek-v4-flash",
+  "status": "running",
+  "completed": 295,
+  "total": 300,
+  "percent": 98.33,
+  "remaining": 5,
+  "session_completed": 7,
+  "elapsed_sec": 31.32,
+  "rate_q_per_min": 13.411,
+  "eta_min": 0.37,
+  "eta_at": "2026-08-07 23:05:51",
+  "last_id": "CS-EVO-10560",
+  "consecutive_failures": 2,
+  "updated_at": "2026-08-07 23:05:29"
+}

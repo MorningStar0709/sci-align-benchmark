@@ -1,0 +1,2819 @@
+{
+ "source": "benchmark/eval/medical_dual_rejudge/raw_qwen_med_run1.json",
+ "source_sha256": "0394efcb0cbb89e8324cdd032ddab26bf134e20284860151d8a6107819816590",
+ "source_bytes": 1003543,
+ "mode": "aggregate",
+ "dropped_fields": {
+  "reason": 100,
+  "issues": 100,
+  "model_answer": 100,
+  "expected_answer": 100,
+  "title": 100,
+  "<long-string>": 22
+ },
+ "required_by": [
+  "(装载件实读)"
+ ],
+ "data": {
+  "model": "raw-Qwen3.5-4B-text-only",
+  "judge_model": "deepseek-v4-flash",
+  "scorer_version": "2.0",
+  "scoring_mode": "medical_dual_judge_arbitrated",
+  "total_questions": 100,
+  "overall_score": 0.49,
+  "dimension_scores": {
+   "identify": 0.2721,
+   "model": 0.6515,
+   "transfer": 0.553
+  },
+  "records": [
+   {
+    "id": "CS-MED-00601",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12816607",
+     "authors": [
+      "Zhen Wang $^{",
+      "}$",
+      "Jiasong Lin $^{",
+      "}$",
+      "Yangbin Zhu $^{"
+     ],
+     "year": 2025,
+     "paper_path": "PMC12816607",
+     "text_offset": 24288
+    },
+    "source_ref": "PMC12816607",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     "identify(L3)答案控制概念不足（检测到 1/2 个）"
+    ]
+   },
+   {
+    "id": "CS-MED-00136",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9842495",
+     "authors": [
+      "Alastair van Heerden",
+      "\\",
+      "Adam Szpiro",
+      "Xolani Ntinga",
+      "Connie Celum"
+     ],
+     "year": null,
+     "paper_path": "PMC9842495",
+     "text_offset": 25032
+    },
+    "source_ref": "PMC9842495",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00046",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6325982",
+     "authors": [],
+     "year": 2018,
+     "paper_path": "PMC6325982",
+     "text_offset": 0
+    },
+    "source_ref": "PMC6325982",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00502",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC8069034",
+     "authors": [
+      "John Hood",
+      "\\",
+      "Ignacio González-García",
+      "Nicholas White",
+      "Leeron Marshall"
+     ],
+     "year": 2021,
+     "paper_path": "PMC8069034",
+     "text_offset": 0
+    },
+    "source_ref": "PMC8069034",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00040",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9842495",
+     "authors": [
+      "Alastair van Heerden",
+      "\\",
+      "Adam Szpiro",
+      "Xolani Ntinga",
+      "Connie Celum"
+     ],
+     "year": null,
+     "paper_path": "PMC9842495",
+     "text_offset": 0
+    },
+    "source_ref": "PMC9842495",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     null
+    ]
+   },
+   {
+    "id": "CS-MED-00634",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12742169",
+     "authors": [],
+     "year": 2025,
+     "paper_path": "PMC12742169",
+     "text_offset": 19614
+    },
+    "source_ref": "PMC12742169",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00514",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6448906",
+     "authors": [
+      null,
+      "& Tadej Battelino"
+     ],
+     "year": 2017,
+     "paper_path": "PMC6448906",
+     "text_offset": 0
+    },
+    "source_ref": "PMC6448906",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00499",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7793822",
+     "authors": [
+      "Gilead",
+      "United States"
+     ],
+     "year": 2020,
+     "paper_path": "PMC7793822",
+     "text_offset": 0
+    },
+    "source_ref": "PMC7793822",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     "identify(L2)答案控制概念不足（检测到 0/1 个）"
+    ]
+   },
+   {
+    "id": "CS-MED-00427",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5814509",
+     "authors": [],
+     "year": 2017,
+     "paper_path": "PMC5814509",
+     "text_offset": 50568
+    },
+    "source_ref": "PMC5814509",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00064",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5097399",
+     "authors": [
+      "Christina Pallitto\\",
+      "Claudia García-Moreno",
+      "Heidi Stöeckl",
+      "Abigail Hatcher",
+      "Catherine MacPhail"
+     ],
+     "year": null,
+     "paper_path": "PMC5097399",
+     "text_offset": 6368
+    },
+    "source_ref": "PMC5097399",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00421",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11292867",
+     "authors": [
+      "Matthew Payne\\",
+      "Francis Pooke",
+      "Tom M. Wilkinson",
+      "Lui Holder-Pearson",
+      "Bronté Chamberlain"
+     ],
+     "year": 2023,
+     "paper_path": "PMC11292867",
+     "text_offset": 40888
+    },
+    "source_ref": "PMC11292867",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00163",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.5,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6726216",
+     "authors": [],
+     "year": 2019,
+     "paper_path": "PMC6726216",
+     "text_offset": 18330
+    },
+    "source_ref": "PMC6726216",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00088",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9842495",
+     "authors": [
+      "Alastair van Heerden",
+      "\\",
+      "Adam Szpiro",
+      "Xolani Ntinga",
+      "Connie Celum"
+     ],
+     "year": null,
+     "paper_path": "PMC9842495",
+     "text_offset": 12516
+    },
+    "source_ref": "PMC9842495",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00007",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7691962",
+     "authors": [
+      "Emily R. Meier",
+      "Susan E. Creary",
+      "Matthew M. Heeney",
+      "Min Dong",
+      "Abena O. Appiah-Kubi"
+     ],
+     "year": null,
+     "paper_path": "PMC7691962",
+     "text_offset": 0
+    },
+    "source_ref": "PMC7691962",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00469",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11292867",
+     "authors": [
+      "Matthew Payne\\",
+      "Francis Pooke",
+      "Tom M. Wilkinson",
+      "Lui Holder-Pearson",
+      "Bronté Chamberlain"
+     ],
+     "year": 2023,
+     "paper_path": "PMC11292867",
+     "text_offset": 45999
+    },
+    "source_ref": "PMC11292867",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00535",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC13019998",
+     "authors": [
+      "Anwar Khan",
+      "\\",
+      "Amalia bt Madihie",
+      "Maqsood Haider",
+      "Sajjad Haider"
+     ],
+     "year": null,
+     "paper_path": "PMC13019998",
+     "text_offset": 12717
+    },
+    "source_ref": "PMC13019998",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00622",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC8585847",
+     "authors": [
+      "Lothar Roessig  · Burkert Pieske",
+      "· Dirk Garmann  · Michaela Meyer"
+     ],
+     "year": 2021,
+     "paper_path": "PMC8585847",
+     "text_offset": 18170
+    },
+    "source_ref": "PMC8585847",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     "identify(L2)答案控制概念不足（检测到 0/1 个）"
+    ]
+   },
+   {
+    "id": "CS-MED-00640",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5714048",
+     "authors": [
+      "Ilma Xhaferllari",
+      "a Eugene Wong",
+      "Karl Bzdusek",
+      "Michael Lock",
+      "and Jeff Z. Chen"
+     ],
+     "year": null,
+     "paper_path": "PMC5714048",
+     "text_offset": 17940
+    },
+    "source_ref": "PMC5714048",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00682",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC13019998",
+     "authors": [
+      "Anwar Khan",
+      "\\",
+      "Amalia bt Madihie",
+      "Maqsood Haider",
+      "Sajjad Haider"
+     ],
+     "year": null,
+     "paper_path": "PMC13019998",
+     "text_offset": 50868
+    },
+    "source_ref": "PMC13019998",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00211",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.0,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6726216",
+     "authors": [],
+     "year": 2019,
+     "paper_path": "PMC6726216",
+     "text_offset": 24440
+    },
+    "source_ref": "PMC6726216",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00547",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6023462",
+     "authors": [
+      "James Best",
+      "Charles Fong",
+      "Helen Benghiat",
+      "Hisham Mehanna",
+      "John Glaholm and Andrew Hartley \\"
+     ],
+     "year": 2018,
+     "paper_path": "PMC6023462",
+     "text_offset": 4994
+    },
+    "source_ref": "PMC6023462",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00571",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12487728",
+     "authors": [
+      "Adrien Holzgreve",
+      "Astrid Delker",
+      "Zachary Ells",
+      "Julia Brosch-Lenz",
+      "Lena M. Unterrainer"
+     ],
+     "year": null,
+     "paper_path": "PMC12487728",
+     "text_offset": 5491
+    },
+    "source_ref": "PMC12487728",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00172",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6937062",
+     "authors": [
+      "Emma Clark",
+      "Miranda Morton",
+      "Shriya Sharma",
+      "Holly Fisher",
+      "Denise Howel"
+     ],
+     "year": 2019,
+     "paper_path": "PMC6937062",
+     "text_offset": 20745
+    },
+    "source_ref": "PMC6937062",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00109",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7578131",
+     "authors": [],
+     "year": 2020,
+     "paper_path": "PMC7578131",
+     "text_offset": 14902
+    },
+    "source_ref": "PMC7578131",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00205",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7578131",
+     "authors": [],
+     "year": 2020,
+     "paper_path": "PMC7578131",
+     "text_offset": 29804
+    },
+    "source_ref": "PMC7578131",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00238",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6325982",
+     "authors": [],
+     "year": 2018,
+     "paper_path": "PMC6325982",
+     "text_offset": 36028
+    },
+    "source_ref": "PMC6325982",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00709",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12838616",
+     "authors": [
+      "Shanyong Huang",
+      "Yusheng Fu",
+      "Shaowei Kong",
+      "Yuyang Liu and Jian Yan \\"
+     ],
+     "year": 2023,
+     "paper_path": "PMC12838616",
+     "text_offset": 71960
+    },
+    "source_ref": "PMC12838616",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00703",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7840704",
+     "authors": [
+      "Anisja Hühne",
+      "Eva Hoch and Dominic Landgraf\\"
+     ],
+     "year": 2020,
+     "paper_path": "PMC7840704",
+     "text_offset": 41544
+    },
+    "source_ref": "PMC7840704",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00193",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.5,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7470506",
+     "authors": [
+      "M P Vizcaychipi",
+      "Laura Martins",
+      "James R White",
+      "Dan Stleper Karbing",
+      "Amandeep Gupta"
+     ],
+     "year": 2020,
+     "paper_path": "PMC7470506",
+     "text_offset": 21812
+    },
+    "source_ref": "PMC7470506",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     "identify(L2)答案控制概念不足（检测到 0/1 个）"
+    ]
+   },
+   {
+    "id": "CS-MED-00247",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.0,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7691962",
+     "authors": [
+      "Emily R. Meier",
+      "Susan E. Creary",
+      "Matthew M. Heeney",
+      "Min Dong",
+      "Abena O. Appiah-Kubi"
+     ],
+     "year": null,
+     "paper_path": "PMC7691962",
+     "text_offset": 45445
+    },
+    "source_ref": "PMC7691962",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00700",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.0,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11473295",
+     "authors": [],
+     "year": 2024,
+     "paper_path": "PMC11473295",
+     "text_offset": 22288
+    },
+    "source_ref": "PMC11473295",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00616",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7118863",
+     "authors": [
+      "Marianne Jensen Hjermstad",
+      "\\†",
+      "Nina Aass",
+      "†",
+      "Sigve Andersen"
+     ],
+     "year": null,
+     "paper_path": "PMC7118863",
+     "text_offset": 23886
+    },
+    "source_ref": "PMC7118863",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00280",
+    "dimension": "identify",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.5,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9842495",
+     "authors": [
+      "Alastair van Heerden",
+      "\\",
+      "Adam Szpiro",
+      "Xolani Ntinga",
+      "Connie Celum"
+     ],
+     "year": null,
+     "paper_path": "PMC9842495",
+     "text_offset": 62580
+    },
+    "source_ref": "PMC9842495",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00487",
+    "dimension": "identify",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12742169",
+     "authors": [],
+     "year": 2025,
+     "paper_path": "PMC12742169",
+     "text_offset": 0
+    },
+    "source_ref": "PMC12742169",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00695",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.5,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7793822",
+     "authors": [
+      "Gilead",
+      "United States"
+     ],
+     "year": 2020,
+     "paper_path": "PMC7793822",
+     "text_offset": 27276
+    },
+    "source_ref": "PMC7793822",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00233",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC10503150",
+     "authors": [
+      "Linda Birt\\",
+      "Thando Katangwe",
+      "Chigamba",
+      "Sion Scott",
+      "David J Wright"
+     ],
+     "year": null,
+     "paper_path": "PMC10503150",
+     "text_offset": 16120
+    },
+    "source_ref": "PMC10503150",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00530",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC8363503",
+     "authors": [
+      "Charlotte K. Boughton",
+      "✉",
+      "Afroditi Tripyla",
+      "Sara Hartnell",
+      "Aideen Daly"
+     ],
+     "year": null,
+     "paper_path": "PMC8363503",
+     "text_offset": 8533
+    },
+    "source_ref": "PMC8363503",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00344",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12574440",
+     "authors": [
+      "To cite: Kadiyala N",
+      "Coleman R",
+      "Lakshman R",
+      "et al. Assessing the efficacy",
+      null
+     ],
+     "year": 2025,
+     "paper_path": "PMC12574440",
+     "text_offset": 42175
+    },
+    "source_ref": "PMC12574440",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00107",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5811797",
+     "authors": [
+      "The Journal of Clinical Pharmacology",
+      "()"
+     ],
+     "year": 2018,
+     "paper_path": "PMC5811797",
+     "text_offset": 19988
+    },
+    "source_ref": "PMC5811797",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00446",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.5,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9303654",
+     "authors": [
+      null,
+      "D"
+     ],
+     "year": null,
+     "paper_path": "PMC9303654",
+     "text_offset": 68940
+    },
+    "source_ref": "PMC9303654",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00440",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12574440",
+     "authors": [
+      "To cite: Kadiyala N",
+      "Coleman R",
+      "Lakshman R",
+      "et al. Assessing the efficacy",
+      null
+     ],
+     "year": 2025,
+     "paper_path": "PMC12574440",
+     "text_offset": 54225
+    },
+    "source_ref": "PMC12574440",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00599",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11929207",
+     "authors": [
+      "M. M. B. Horstink",
+      "\\",
+      "D. R. Geel",
+      "C. A. den Uil",
+      "P. E. Deetman"
+     ],
+     "year": null,
+     "paper_path": "PMC11929207",
+     "text_offset": 10402
+    },
+    "source_ref": "PMC11929207",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00410",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5490215",
+     "authors": [
+      "C. M. Lund",
+      "\\",
+      "K. K. Vistisen",
+      "C. Dehlendorff",
+      "F. Rønholt"
+     ],
+     "year": null,
+     "paper_path": "PMC5490215",
+     "text_offset": 51672
+    },
+    "source_ref": "PMC5490215",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00665",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.5,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7118863",
+     "authors": [
+      "Marianne Jensen Hjermstad",
+      "\\†",
+      "Nina Aass",
+      "†",
+      "Sigve Andersen"
+     ],
+     "year": null,
+     "paper_path": "PMC7118863",
+     "text_offset": 35829
+    },
+    "source_ref": "PMC7118863",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00659",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC10803438",
+     "authors": [],
+     "year": 2023,
+     "paper_path": "PMC10803438",
+     "text_offset": 37755
+    },
+    "source_ref": "PMC10803438",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00392",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.0,
+    "avg_score": 0.5,
+    "score_diff": 0.75,
+    "disputed": true,
+    "arbitrated": true,
+    "paper_source": {
+     "arxiv_id": "PMC12574440",
+     "authors": [
+      "To cite: Kadiyala N",
+      "Coleman R",
+      "Lakshman R",
+      "et al. Assessing the efficacy",
+      null
+     ],
+     "year": 2025,
+     "paper_path": "PMC12574440",
+     "text_offset": 48200
+    },
+    "source_ref": "PMC12574440",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00164",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5690098",
+     "authors": [
+      null,
+      null,
+      null,
+      null,
+      "$\\mathrm { D } _ { \\mathrm { M A X } }"
+     ],
+     "year": null,
+     "paper_path": "PMC5690098",
+     "text_offset": 13035
+    },
+    "source_ref": "PMC5690098",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00110",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.5,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9303654",
+     "authors": [
+      null,
+      "D"
+     ],
+     "year": null,
+     "paper_path": "PMC9303654",
+     "text_offset": 15320
+    },
+    "source_ref": "PMC9303654",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00548",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7793822",
+     "authors": [
+      "Gilead",
+      "United States"
+     ],
+     "year": 2020,
+     "paper_path": "PMC7793822",
+     "text_offset": 6819
+    },
+    "source_ref": "PMC7793822",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00653",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6561428",
+     "authors": [
+      "To cite: Musolino G",
+      "Allen JM",
+      "Hartnell S",
+      "et al. Assessing the efficacy",
+      null
+     ],
+     "year": 2019,
+     "paper_path": "PMC6561428",
+     "text_offset": 20775
+    },
+    "source_ref": "PMC6561428",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00323",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.5,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6133081",
+     "authors": [],
+     "year": 2018,
+     "paper_path": "PMC6133081",
+     "text_offset": 52074
+    },
+    "source_ref": "PMC6133081",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00035",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6133081",
+     "authors": [],
+     "year": 2018,
+     "paper_path": "PMC6133081",
+     "text_offset": 0
+    },
+    "source_ref": "PMC6133081",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     null
+    ]
+   },
+   {
+    "id": "CS-MED-00644",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.5,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC10882371",
+     "authors": [
+      "Tom Wilkinson",
+      "Dunya Tomic",
+      "Erin Boyle",
+      "David Burren",
+      "Yasser Elghattis"
+     ],
+     "year": 2024,
+     "paper_path": "PMC10882371",
+     "text_offset": 19194
+    },
+    "source_ref": "PMC10882371",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00089",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC10503150",
+     "authors": [
+      "Linda Birt\\",
+      "Thando Katangwe",
+      "Chigamba",
+      "Sion Scott",
+      "David J Wright"
+     ],
+     "year": null,
+     "paper_path": "PMC10503150",
+     "text_offset": 4030
+    },
+    "source_ref": "PMC10503150",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00017",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC4609090",
+     "authors": [
+      "Rachel Gold",
+      "\\",
+      "Celine Hollombe",
+      "Arwen Bunce",
+      "Christine Nelson"
+     ],
+     "year": null,
+     "paper_path": "PMC4609090",
+     "text_offset": 0
+    },
+    "source_ref": "PMC4609090",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00608",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11466402",
+     "authors": [],
+     "year": 2019,
+     "paper_path": "PMC11466402",
+     "text_offset": 12436
+    },
+    "source_ref": "PMC11466402",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00701",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.5,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC8541813",
+     "authors": [],
+     "year": null,
+     "paper_path": "PMC8541813",
+     "text_offset": 15524
+    },
+    "source_ref": "PMC8541813",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00134",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11369390",
+     "authors": [
+      "Zongsheng Hu (MSc)",
+      "Radhe Mohan (PhD)",
+      "Yan Chu (PhD)",
+      "Xiaochun Wang (PhD)",
+      "Peter S.N. van Rossum (MD"
+     ],
+     "year": null,
+     "paper_path": "PMC11369390",
+     "text_offset": 9258
+    },
+    "source_ref": "PMC11369390",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00146",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.5,
+    "avg_score": 0.5,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC2645399",
+     "authors": [],
+     "year": null,
+     "paper_path": "PMC2645399",
+     "text_offset": 20364
+    },
+    "source_ref": "PMC2645399",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00683",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12742169",
+     "authors": [],
+     "year": 2025,
+     "paper_path": "PMC12742169",
+     "text_offset": 26152
+    },
+    "source_ref": "PMC12742169",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00083",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6133081",
+     "authors": [],
+     "year": 2018,
+     "paper_path": "PMC6133081",
+     "text_offset": 8679
+    },
+    "source_ref": "PMC6133081",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00284",
+    "dimension": "model",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC8600696",
+     "authors": [],
+     "year": null,
+     "paper_path": "PMC8600696",
+     "text_offset": 33055
+    },
+    "source_ref": "PMC8600696",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00527",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5593171",
+     "authors": [
+      "IH Bartelink",
+      "N Zhang",
+      "RJ Keizer",
+      "N Strydom",
+      "PJ Converse"
+     ],
+     "year": 2017,
+     "paper_path": "PMC5593171",
+     "text_offset": 0
+    },
+    "source_ref": "PMC5593171",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00500",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7618672",
+     "authors": [
+      "Chloë Royston",
+      "Julia Ware",
+      "Janet M. Allen",
+      "Malgorzata E. Wilinska",
+      "Sara Hartnell"
+     ],
+     "year": 2025,
+     "paper_path": "PMC7618672",
+     "text_offset": 0
+    },
+    "source_ref": "PMC7618672",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00386",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC2645399",
+     "authors": [],
+     "year": null,
+     "paper_path": "PMC2645399",
+     "text_offset": 54304
+    },
+    "source_ref": "PMC2645399",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     null
+    ]
+   },
+   {
+    "id": "CS-MED-00656",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6221103",
+     "authors": [
+      "Mi-Ok Kim",
+      null
+     ],
+     "year": null,
+     "paper_path": "PMC6221103",
+     "text_offset": 26313
+    },
+    "source_ref": "PMC6221103",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00254",
+    "dimension": "model",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9303654",
+     "authors": [
+      null,
+      "D"
+     ],
+     "year": null,
+     "paper_path": "PMC9303654",
+     "text_offset": 38300
+    },
+    "source_ref": "PMC9303654",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00267",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC3041664",
+     "authors": [
+      "Colette Browning",
+      "Anna Chapman\\",
+      "Sean Cowlishaw",
+      "Zhixin Li",
+      "Shane A Thomas"
+     ],
+     "year": null,
+     "paper_path": "PMC3041664",
+     "text_offset": 28355
+    },
+    "source_ref": "PMC3041664",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00564",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.75,
+    "avg_score": 0.5,
+    "score_diff": 0.75,
+    "disputed": true,
+    "arbitrated": true,
+    "paper_source": {
+     "arxiv_id": "PMC6921499",
+     "authors": [
+      "Luca F. Roggeveen\\†",
+      "Lucas M. Fleuren†",
+      "Tingjie Guo†",
+      "Patrick Thoral",
+      "Harm Jan de Grooth"
+     ],
+     "year": null,
+     "paper_path": "PMC6921499",
+     "text_offset": 7429
+    },
+    "source_ref": "PMC6921499",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00546",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.0,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.0,
+    "avg_score": 0.0,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC10882371",
+     "authors": [
+      "Tom Wilkinson",
+      "Dunya Tomic",
+      "Erin Boyle",
+      "David Burren",
+      "Yasser Elghattis"
+     ],
+     "year": 2024,
+     "paper_path": "PMC10882371",
+     "text_offset": 6398
+    },
+    "source_ref": "PMC10882371",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00057",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.5,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6009467",
+     "authors": [
+      "Sybil A McAuley",
+      "Martin I de Bock",
+      "Vijaya Sundararajan",
+      "Melissa H Lee",
+      "Barbora Paldus"
+     ],
+     "year": 2018,
+     "paper_path": "PMC6009467",
+     "text_offset": 7706
+    },
+    "source_ref": "PMC6009467",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00339",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9911317",
+     "authors": [
+      "Diabetes Care ;:,",
+      "https://doi.org/./dc-"
+     ],
+     "year": 2022,
+     "paper_path": "PMC9911317",
+     "text_offset": 78736
+    },
+    "source_ref": "PMC9911317",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     null
+    ]
+   },
+   {
+    "id": "CS-MED-00396",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC3002358",
+     "authors": [
+      "Hanna van Waart $^{}$",
+      "Martijn M Stuiver $^{}$",
+      "Wim H van Harten $^{}$",
+      "Gabe S Sonke $^{}$",
+      "Neil K Aaronson $^{}$"
+     ],
+     "year": null,
+     "paper_path": "PMC3002358",
+     "text_offset": 49176
+    },
+    "source_ref": "PMC3002358",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00195",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9911317",
+     "authors": [
+      "Diabetes Care ;:,",
+      "https://doi.org/./dc-"
+     ],
+     "year": 2022,
+     "paper_path": "PMC9911317",
+     "text_offset": 44992
+    },
+    "source_ref": "PMC9911317",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00390",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6417075",
+     "authors": [
+      "Karina M. Egeland\\",
+      "Ane-Marthe Solheim Skar",
+      "Mathilde Endsjø",
+      "Erlend Høen Laukvik",
+      "Harald Bækkelund"
+     ],
+     "year": null,
+     "paper_path": "PMC6417075",
+     "text_offset": 61896
+    },
+    "source_ref": "PMC6417075",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00441",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6009467",
+     "authors": [
+      "Sybil A McAuley",
+      "Martin I de Bock",
+      "Vijaya Sundararajan",
+      "Melissa H Lee",
+      "Barbora Paldus"
+     ],
+     "year": 2018,
+     "paper_path": "PMC6009467",
+     "text_offset": 69354
+    },
+    "source_ref": "PMC6009467",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00660",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12838616",
+     "authors": [
+      "Shanyong Huang",
+      "Yusheng Fu",
+      "Shaowei Kong",
+      "Yuyang Liu and Jian Yan \\"
+     ],
+     "year": 2023,
+     "paper_path": "PMC12838616",
+     "text_offset": 53970
+    },
+    "source_ref": "PMC12838616",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00024",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.5,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6858613",
+     "authors": [],
+     "year": null,
+     "paper_path": "PMC6858613",
+     "text_offset": 0
+    },
+    "source_ref": "PMC6858613",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00015",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11320540",
+     "authors": [
+      "Peng Huang#",
+      "Jiawen Shang#",
+      "Xin Xie#",
+      "Zhihui Hu",
+      "Zhiqiang Liu"
+     ],
+     "year": null,
+     "paper_path": "PMC11320540",
+     "text_offset": 0
+    },
+    "source_ref": "PMC11320540",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00675",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6245004",
+     "authors": [],
+     "year": 2018,
+     "paper_path": "PMC6245004",
+     "text_offset": 22401
+    },
+    "source_ref": "PMC6245004",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00093",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.5,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5035370",
+     "authors": [
+      "Roberto Visentin",
+      "PhD",
+      "Clemens Giegerich",
+      "MS",
+      "Robert Ja¨ger"
+     ],
+     "year": null,
+     "paper_path": "PMC5035370",
+     "text_offset": 7071
+    },
+    "source_ref": "PMC5035370",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00585",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.5,
+    "avg_score": 0.5,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12742169",
+     "authors": [],
+     "year": 2025,
+     "paper_path": "PMC12742169",
+     "text_offset": 13076
+    },
+    "source_ref": "PMC12742169",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00483",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12216833",
+     "authors": [
+      "Yongsuk Choi",
+      "Peng Jin",
+      "Sanghyun Lee",
+      "Yu Song",
+      "Roland Yingjie Tay"
+     ],
+     "year": 2025,
+     "paper_path": "PMC12216833",
+     "text_offset": 0
+    },
+    "source_ref": "PMC12216833",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00153",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6009467",
+     "authors": [
+      "Sybil A McAuley",
+      "Martin I de Bock",
+      "Vijaya Sundararajan",
+      "Melissa H Lee",
+      "Barbora Paldus"
+     ],
+     "year": 2018,
+     "paper_path": "PMC6009467",
+     "text_offset": 23118
+    },
+    "source_ref": "PMC6009467",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00105",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.5,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6009467",
+     "authors": [
+      "Sybil A McAuley",
+      "Martin I de Bock",
+      "Vijaya Sundararajan",
+      "Melissa H Lee",
+      "Barbora Paldus"
+     ],
+     "year": 2018,
+     "paper_path": "PMC6009467",
+     "text_offset": 15412
+    },
+    "source_ref": "PMC6009467",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00486",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC13019998",
+     "authors": [
+      "Anwar Khan",
+      "\\",
+      "Amalia bt Madihie",
+      "Maqsood Haider",
+      "Sajjad Haider"
+     ],
+     "year": null,
+     "paper_path": "PMC13019998",
+     "text_offset": 0
+    },
+    "source_ref": "PMC13019998",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00225",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7439928",
+     "authors": [
+      "Chengxian Guo",
+      "PhD\\; Yun Kuang",
+      "M Med\\; Honghao Zhou",
+      "PhD; Hong Yuan",
+      "MD; Qi Pei"
+     ],
+     "year": 2017,
+     "paper_path": "PMC7439928",
+     "text_offset": 24496
+    },
+    "source_ref": "PMC7439928",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00684",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC10829799",
+     "authors": [],
+     "year": 2023,
+     "paper_path": "PMC10829799",
+     "text_offset": 20492
+    },
+    "source_ref": "PMC10829799",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     null
+    ]
+   },
+   {
+    "id": "CS-MED-00021",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11241942",
+     "authors": [
+      "Qun Wang\\",
+      "Hua Liu",
+      "Yuhong Shen",
+      "Lifei Shen",
+      "Jian Li and Weiwei Feng\\"
+     ],
+     "year": null,
+     "paper_path": "PMC11241942",
+     "text_offset": 0
+    },
+    "source_ref": "PMC11241942",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00687",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12898571",
+     "authors": [
+      "Merve ˙I¸scan Yapar",
+      "\\",
+      "Neslihan Çelik",
+      "Murat ¸Sentürk",
+      "Tubanur Çebi Akyüz"
+     ],
+     "year": null,
+     "paper_path": "PMC12898571",
+     "text_offset": 21764
+    },
+    "source_ref": "PMC12898571",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00693",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC10882371",
+     "authors": [
+      "Tom Wilkinson",
+      "Dunya Tomic",
+      "Erin Boyle",
+      "David Burren",
+      "Yasser Elghattis"
+     ],
+     "year": 2024,
+     "paper_path": "PMC10882371",
+     "text_offset": 25592
+    },
+    "source_ref": "PMC10882371",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     "transfer(L2)答案过短：132/150 字符（需要 >=150）"
+    ]
+   },
+   {
+    "id": "CS-MED-00213",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.25,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC11241942",
+     "authors": [
+      "Qun Wang\\",
+      "Hua Liu",
+      "Yuhong Shen",
+      "Lifei Shen",
+      "Jian Li and Weiwei Feng\\"
+     ],
+     "year": null,
+     "paper_path": "PMC11241942",
+     "text_offset": 27568
+    },
+    "source_ref": "PMC11241942",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00387",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC9911317",
+     "authors": [
+      "Diabetes Care ;:,",
+      "https://doi.org/./dc-"
+     ],
+     "year": 2022,
+     "paper_path": "PMC9911317",
+     "text_offset": 89984
+    },
+    "source_ref": "PMC9911317",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00039",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC12801964",
+     "authors": [
+      "Shining Cai",
+      "†",
+      "Yundi Hu†",
+      "Yixiang Hong",
+      "Luheng Qian"
+     ],
+     "year": 2021,
+     "paper_path": "PMC12801964",
+     "text_offset": 0
+    },
+    "source_ref": "PMC12801964",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     null
+    ]
+   },
+   {
+    "id": "CS-MED-00156",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.25,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.0,
+    "judge2_score": 0.25,
+    "avg_score": 0.25,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC3002358",
+     "authors": [
+      "Hanna van Waart $^{}$",
+      "Martijn M Stuiver $^{}$",
+      "Wim H van Harten $^{}$",
+      "Gabe S Sonke $^{}$",
+      "Neil K Aaronson $^{}$"
+     ],
+     "year": null,
+     "paper_path": "PMC3002358",
+     "text_offset": 18441
+    },
+    "source_ref": "PMC3002358",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00468",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6454722",
+     "authors": [
+      "Andrea L. Jorgensen\\",
+      "Clare Prince",
+      "Gail Fitzgerald",
+      "Anita Hanson",
+      "Jennifer Downing"
+     ],
+     "year": null,
+     "paper_path": "PMC6454722",
+     "text_offset": 61335
+    },
+    "source_ref": "PMC6454722",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00189",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.5,
+    "avg_score": 0.5,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC5035370",
+     "authors": [
+      "Roberto Visentin",
+      "PhD",
+      "Clemens Giegerich",
+      "MS",
+      "Robert Ja¨ger"
+     ],
+     "year": null,
+     "paper_path": "PMC5035370",
+     "text_offset": 21213
+    },
+    "source_ref": "PMC5035370",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00033",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7439928",
+     "authors": [
+      "Chengxian Guo",
+      "PhD\\; Yun Kuang",
+      "M Med\\; Honghao Zhou",
+      "PhD; Hong Yuan",
+      "MD; Qi Pei"
+     ],
+     "year": 2017,
+     "paper_path": "PMC7439928",
+     "text_offset": 0
+    },
+    "source_ref": "PMC7439928",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00360",
+    "dimension": "transfer",
+    "difficulty_level": "L2",
+    "score": 0.75,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.75,
+    "judge2_score": 0.75,
+    "avg_score": 0.75,
+    "score_diff": 0.0,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC6858613",
+     "authors": [],
+     "year": null,
+     "paper_path": "PMC6858613",
+     "text_offset": 53760
+    },
+    "source_ref": "PMC6858613",
+    "consistency_status": "needs_review"
+   },
+   {
+    "id": "CS-MED-00636",
+    "dimension": "transfer",
+    "difficulty_level": "L3",
+    "score": 0.5,
+    "scoring_mode": "medical_llm_judge",
+    "scorer_version": "2.0",
+    "judge1_score": 0.5,
+    "judge2_score": 0.25,
+    "avg_score": 0.5,
+    "score_diff": 0.25,
+    "disputed": false,
+    "arbitrated": false,
+    "paper_source": {
+     "arxiv_id": "PMC7526307",
+     "authors": [
+      "To cite: Reitz KM",
+      "Seymour CW",
+      "Vates J",
+      null
+     ],
+     "year": 2020,
+     "paper_path": "PMC7526307",
+     "text_offset": 19587
+    },
+    "source_ref": "PMC7526307",
+    "consistency_status": "needs_review",
+    "lint_issues": [
+     "transfer(L3)答案过短：161/200 字符（需要 >=200）"
+    ]
+   }
+  ],
+  "issues_summary": {
+   "未识别任何控制理论概念": 7,
+   "未引用文本证据": 5,
+   "未完成跨分支映射": 5,
+   "未引用任何文本证据": 4,
+   "未讨论模型假设与适用范围": 4,
+   "未完成跨控制分支映射": 3,
+   "未基于提供的医学论文内容进行分析": 2,
+   "未进行跨分支映射": 2,
+   "未完成控制理论分支映射": 2,
+   "未讨论模型的适用范围和局限性": 2,
+   "模型假设与适用范围讨论不充分": 2,
+   "LLM judge response parse failure": 2,
+   "缺少模型假设与适用范围的讨论": 2,
+   "未进行逻辑推导": 2,
+   "未给出明确的定性预测结论": 2,
+   "未提供任何量化预测数值或范围": 2,
+   "未识别标准答案中的脉冲幅度调制和脉冲频率调制概念": 1,
+   "未提供任何来自指定医学论文内容的概念识别。": 1,
+   "回答内容与任务要求完全不符，属于答非所问。": 1,
+   "未识别出任何控制理论概念": 1
+  },
+  "failure_summary": {
+   "LLM judge response parse failure": 2
+  },
+  "updated_at": "2026-08-22 22:39:36",
+  "dual_judge_stats": {
+   "total_dual_judge": 100,
+   "disputed": 2,
+   "arbitrated": 2,
+   "dispute_rate": 0.02,
+   "mean_score_diff": 0.135,
+   "disputed_by_dimension": {
+    "model": 1,
+    "transfer": 1
+   }
+  },
+  "judge2_model": "mimo-v2.5",
+  "arb_model": "qwen3.7-plus",
+  "complete": true,
+  "rejudge_meta": {
+   "source": null,
+   "rejudged_at": "2026-08-22 22:39:36",
+   "purpose": null,
+   "script": "scripts/run_medical_dual_rejudge.py"
+  }
+ }
+}

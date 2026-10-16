@@ -1,0 +1,285 @@
+{
+ "source": "benchmark/eval/judge_audit/anchor_report.json",
+ "source_sha256": "b44232504a98ff3bf5485a6354f9d89f34cda3a21237ba2f782b3702c3a2f3ef",
+ "source_bytes": 6228,
+ "mode": "structure",
+ "dropped_fields": {},
+ "required_by": [
+  "(装载件实读)",
+  "anchor_0_23",
+  "anchor_21_23"
+ ],
+ "data": {
+  "meta": {
+   "tool": "scripts/run_judge_audit.py",
+   "generated_at": "2026-08-22T14:20:24",
+   "seed": 20260805
+  },
+  "phase": "anchor",
+  "stats": {
+   "n": 23,
+   "full_order_rate": 0.0,
+   "good_vs_bad_rate": 0.0,
+   "bad_vs_empty_rate": 0.3043,
+   "good_vs_empty_rate": 0.3043
+  },
+  "triplets": [
+   {
+    "id": "CS-EVO-00630",
+    "good": 1.0,
+    "bad": 1.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 0→7",
+    "good_bad": false,
+    "bad_empty": true,
+    "good_empty": true,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10363",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00863",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00337",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 2→9",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10601",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 2→9",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10630",
+    "good": 0.25,
+    "bad": 0.25,
+    "empty": 0.0,
+    "mutation": "数字篡改 4→11",
+    "good_bad": false,
+    "bad_empty": true,
+    "good_empty": true,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10124",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10256",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 0→7",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10683",
+    "good": 0.75,
+    "bad": 1.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": true,
+    "good_empty": true,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00401",
+    "good": 0.5,
+    "bad": 0.75,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": true,
+    "good_empty": true,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00349",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10656",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00216",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 20→27",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00957",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 5→12",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10437",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 0→7",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10263",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 2.50→9.5",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-01176",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 18→25",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00650",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 0→7",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10782",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 4→11",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-10724",
+    "good": 1.0,
+    "bad": 1.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 3.3→10.3",
+    "good_bad": false,
+    "bad_empty": true,
+    "good_empty": true,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00382",
+    "good": 0.0,
+    "bad": 0.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 25→32",
+    "good_bad": false,
+    "bad_empty": false,
+    "good_empty": false,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00456",
+    "good": 1.0,
+    "bad": 1.0,
+    "empty": 0.0,
+    "mutation": "数字篡改 1→8",
+    "good_bad": false,
+    "bad_empty": true,
+    "good_empty": true,
+    "full_order": false
+   },
+   {
+    "id": "CS-EVO-00823",
+    "good": 0.75,
+    "bad": 0.75,
+    "empty": 0.0,
+    "mutation": "数字篡改 0→7",
+    "good_bad": false,
+    "bad_empty": true,
+    "good_empty": true,
+    "full_order": false
+   }
+  ],
+  "errors": 0,
+  "skipped": 7,
+  "breaker_tripped": false
+ }
+}

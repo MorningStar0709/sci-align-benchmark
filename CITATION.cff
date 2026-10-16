@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite the papers below."
+title: "Sci-Align Benchmark: evaluation pool, protocols and reproducibility evidence"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Yixiang
+    affiliation: "Independent Researcher"
+url-repository: "https://github.com/MorningStar0709/sci-align-benchmark"
+keywords:
+  - post-training evaluation
+  - question generation
+  - judge auditing
+  - reproducibility
+references:
+  - type: article
+    title: "What Determines the Direction of Post-Training Gains? A Preregistered Multi-Scale Study of Method, Scale, and Base-Model Identity"
+    year: 2026
+    doi: "10.5281/zenodo.23409394"
+  - type: article
+    title: "Benchmarking Post-Training Under Constrained Compute: Protocols for Question Generation, Variance-Controlled Evaluation, and Judge Auditing"
+    year: 2026
+    doi: "10.5281/zenodo.23409480"

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mineru-cli"
+version = "0.1.0"
+description = "MinerU command-line interface."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "psutil>=7.0",
+  "mineru-core>=0.1.0",
+  "typer>=0.12.0",
+  "rich>=13.0.0",
+]
+
+[project.scripts]
+mineru = "mineru_cli.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mineru_cli*"]

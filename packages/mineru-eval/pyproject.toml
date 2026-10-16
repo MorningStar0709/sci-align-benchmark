@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mineru-eval"
+version = "0.1.0"
+description = "MinerU evaluation suite — benchmark evaluation, quality analysis, cross-judge."
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "mineru-core>=0.1.0",
+  "numpy>=1.24.0",
+  "scipy>=1.11.0",
+  "scikit-learn>=1.3.0",
+  "scikit-posthocs>=0.8.0",
+  "anthropic>=0.40",
+  "matplotlib>=3.7.0",
+  "seaborn>=0.13.0",
+  "openai>=1.3.0",
+  "httpx>=0.27.0",
+  "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+rag = [
+  "faiss-cpu>=1.8.0",
+  "rank-bm25>=0.2.2",
+  "torch>=2.0.0",
+  "transformers>=4.36.0",
+  "peft>=0.12.0",
+  "trl>=0.9.0",
+  "datasets>=2.14.0",
+]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mineru_eval*"]

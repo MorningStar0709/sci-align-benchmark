@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mineru-tools"
+version = "0.1.0"
+description = "MinerU utility scripts."
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
+[project.optional-dependencies]
+all = [
+  "mineru-core>=0.1.0",
+  "mineru-api>=0.1.0",
+  "mineru-cli>=0.1.0",
+  "mineru-pipeline>=0.1.0",
+  "mineru-benchmark>=0.1.0",
+  "mineru-medical>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mineru_tools*"]

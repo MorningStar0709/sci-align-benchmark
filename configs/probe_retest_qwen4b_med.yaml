@@ -1,0 +1,124 @@
+# probe retest qwen4b_med (Option A: raw base + new LoRA)
+defaults:
+  alpha: 0.0
+  lambda_l2: 0.0
+  max_steps: 150
+  n_train: 508
+  n_val: 63
+  batch_size: 1
+  gradient_accumulation_steps: 2
+  save_steps: 100
+  base_model: principled-intelligence/Qwen3.5-4B-text-only
+  base_adapter: null
+  lora_target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+    - in_proj_qkv
+    - in_proj_a
+    - in_proj_b
+    - in_proj_z
+    - out_proj
+  train_data: data/finetune/medical/train.jsonl
+  val_data: data/finetune/medical/val.jsonl
+  output_root: models/probe_retest/qwen4b_med
+
+runs:
+  - id: baseline
+    desc: "λ=0 α=0 对照（无探针）"
+    probes: []
+  - id: dora
+    desc: "DoRA only"
+    probes:
+      - type: dora
+  - id: ftd
+    desc: "FTD only, drop_rate=0.3"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+  - id: augment
+    desc: "Augmentation only, aug_rate=0.5"
+    probes:
+      - type: augment
+        aug_rate: 0.5
+  - id: mgpo
+    desc: "MGPO only, rho=0.05"
+    probes:
+      - type: mgpo
+        rho: 0.05
+  - id: dora_ftd
+    desc: "DoRA + FTD"
+    probes:
+      - type: dora
+      - type: ftd
+        drop_rate: 0.3
+  - id: dora_augment
+    desc: "DoRA + Augmentation"
+    probes:
+      - type: dora
+      - type: augment
+        aug_rate: 0.5
+  - id: dora_mgpo
+    desc: "DoRA + MGPO"
+    probes:
+      - type: dora
+      - type: mgpo
+        rho: 0.05
+  - id: ftd_augment
+    desc: "FTD + Augmentation"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+      - type: augment
+        aug_rate: 0.5
+  - id: ftd_mgpo
+    desc: "FTD + MGPO"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+      - type: mgpo
+        rho: 0.05
+  - id: augment_mgpo
+    desc: "Augmentation + MGPO"
+    probes:
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05
+  - id: dora_ftd_augment
+    desc: "DoRA + FTD + Augmentation"
+    probes:
+      - type: dora
+      - type: ftd
+        drop_rate: 0.3
+      - type: augment
+        aug_rate: 0.5
+  - id: dora_ftd_mgpo
+    desc: "DoRA + FTD + MGPO"
+    probes:
+      - type: dora
+      - type: ftd
+        drop_rate: 0.3
+      - type: mgpo
+        rho: 0.05
+  - id: dora_augment_mgpo
+    desc: "DoRA + Augmentation + MGPO"
+    probes:
+      - type: dora
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05
+  - id: ftd_augment_mgpo
+    desc: "FTD + Augmentation + MGPO"
+    probes:
+      - type: ftd
+        drop_rate: 0.3
+      - type: augment
+        aug_rate: 0.5
+      - type: mgpo
+        rho: 0.05

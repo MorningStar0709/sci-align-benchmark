@@ -1,0 +1,33 @@
+# 行尾与文本归一：本仓规范形态是 LF（09-26 Linux 化裁定）
+# 无此文件时，任何 Windows 侧提交都会把 CRLF 重新带回仓库（6859cfd 的归一会失效）
+* text=auto eol=lf
+
+# 二进制：禁止任何换行/编码改写
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
+*.pdf binary
+*.safetensors binary
+*.pt binary
+*.pth binary
+*.gguf binary
+*.bin binary
+*.h5 binary
+*.ckpt binary
+*.zip binary
+*.whl binary
+
+# LaTeX 编译产物与锁文件不做 diff 噪声处理
+*.aux binary
+*.log binary
+
+# 指纹受保护的逐题评测件：它们在 `release/evidence/*.json` 里以 `source_sha256` 登记为指纹，
+# 而多数件由 Windows 侧跑出、带 CRLF（实测 206/237 件）。任何换行归一都会让**读者克隆下来的
+# 字节**与登记指纹不符——归一后实测 26/28 件登记 sha 与 blob 对不上，即 `ARTIFACT.md` row 10
+# 承诺的「在盘件 sha256 == 投影 source_sha256」在克隆里直接失效。故禁任何改写。
+# 必须同时 `-eol`：上面 `*` 段的 `eol=lf` 不会因为 `-text` 就失效，只写 `-text` blob 仍被归一
+# （实测：`-text` 后 check-attr 仍报 `eol: lf`，blob 仍是 LF）。
+benchmark/eval/** -text -eol
